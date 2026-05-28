@@ -1,0 +1,3726 @@
+{
+  "snapshot_date": "2026-05-28",
+  "config": {
+    "estoque_alvo_dias": 60,
+    "cobertura_minima_aceitavel_dias": 45
+  },
+  "produtos": [
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 4026924001011,
+      "produto": "AJI-NO-MOTO® Floppy One Piece Buggy 36g",
+      "categoria": "Temperos e Caldos",
+      "estoque": {
+        "fisico": 0,
+        "reservado": 0,
+        "disponivel": 0
+      },
+      "vendas": {
+        "vendas_30_dias": 0,
+        "venda_media_dia": 0
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 0
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 4026924001011,
+      "produto": "not found",
+      "categoria": null,
+      "estoque": {
+        "fisico": 0,
+        "reservado": 0,
+        "disponivel": 0
+      },
+      "vendas": {
+        "vendas_30_dias": 0,
+        "venda_media_dia": 0
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 0
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": "4026924001011-26924",
+      "produto": "AJI-NO-MOTO® Floppy One Piece Luffy Gear 5 36g",
+      "categoria": "One Piece",
+      "estoque": {
+        "fisico": 108,
+        "reservado": 0,
+        "disponivel": 108
+      },
+      "vendas": {
+        "vendas_30_dias": 132,
+        "venda_media_dia": 4.4
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 0
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 4026925001010,
+      "produto": "AJI-NO-MOTO® Floppy One Piece Law 36g",
+      "categoria": "Temperos e Caldos",
+      "estoque": {
+        "fisico": 0,
+        "reservado": 0,
+        "disponivel": 0
+      },
+      "vendas": {
+        "vendas_30_dias": 0,
+        "venda_media_dia": 0
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 0
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": "4026925001010-26925",
+      "produto": "AJI-NO-MOTO® Floppy One Piece Law 36g",
+      "categoria": "One Piece",
+      "estoque": {
+        "fisico": 46,
+        "reservado": 0,
+        "disponivel": 46
+      },
+      "vendas": {
+        "vendas_30_dias": 45,
+        "venda_media_dia": 1.5
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 0
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 4026926001019,
+      "produto": "AJI-NO-MOTO® Floppy One Piece Buggy 36g",
+      "categoria": "One Piece",
+      "estoque": {
+        "fisico": 0,
+        "reservado": 0,
+        "disponivel": 0
+      },
+      "vendas": {
+        "vendas_30_dias": 10,
+        "venda_media_dia": 0.333333
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 0
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 4026926001019,
+      "produto": "AJI-NO-MOTO® Floppy One Piece Buggy 36g",
+      "categoria": "Temperos e Caldos",
+      "estoque": {
+        "fisico": 93,
+        "reservado": 0,
+        "disponivel": 93
+      },
+      "vendas": {
+        "vendas_30_dias": 10,
+        "venda_media_dia": 0.333333
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 0
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 4026927001018,
+      "produto": "AJI-NO-MOTO® Floppy One Piece Shanks 36g",
+      "categoria": "Temperos e Caldos",
+      "estoque": {
+        "fisico": 222,
+        "reservado": 0,
+        "disponivel": 222
+      },
+      "vendas": {
+        "vendas_30_dias": 61,
+        "venda_media_dia": 2.033333
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 0
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 4026927001018,
+      "produto": "AJI-NO-MOTO® Floppy One Piece Shanks 36g",
+      "categoria": "One Piece",
+      "estoque": {
+        "fisico": 0,
+        "reservado": 0,
+        "disponivel": 0
+      },
+      "vendas": {
+        "vendas_30_dias": 61,
+        "venda_media_dia": 2.033333
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 0
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 4026928001017,
+      "produto": "AJI-NO-MOTO® Floppy One Piece Ace 36g",
+      "categoria": "Temperos e Caldos",
+      "estoque": {
+        "fisico": 0,
+        "reservado": 0,
+        "disponivel": 0
+      },
+      "vendas": {
+        "vendas_30_dias": 0,
+        "venda_media_dia": 0
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 0
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": "4026928001017-26928",
+      "produto": "AJI-NO-MOTO® Floppy One Piece Ace 36g",
+      "categoria": "One Piece",
+      "estoque": {
+        "fisico": 0,
+        "reservado": 0,
+        "disponivel": 0
+      },
+      "vendas": {
+        "vendas_30_dias": 5,
+        "venda_media_dia": 0.166667
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 0
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 4026929001016,
+      "produto": "AJI-NO-MOTO® Floppy One Piece Sabo 36g",
+      "categoria": "Temperos e Caldos",
+      "estoque": {
+        "fisico": 184,
+        "reservado": 0,
+        "disponivel": 184
+      },
+      "vendas": {
+        "vendas_30_dias": 54,
+        "venda_media_dia": 1.8
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 0
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 4026929001016,
+      "produto": "AJI-NO-MOTO® Floppy One Piece Sabo 36g",
+      "categoria": "One Piece",
+      "estoque": {
+        "fisico": 76,
+        "reservado": 0,
+        "disponivel": 76
+      },
+      "vendas": {
+        "vendas_30_dias": 54,
+        "venda_media_dia": 1.8
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 0
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 4026931001011,
+      "produto": "AJI-NO-MOTO® Frasco One Piece Luffy Gear 5 100g",
+      "categoria": "One Piece",
+      "estoque": {
+        "fisico": 0,
+        "reservado": 0,
+        "disponivel": 0
+      },
+      "vendas": {
+        "vendas_30_dias": 62,
+        "venda_media_dia": 2.066667
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 0
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 4026931001011,
+      "produto": "not found",
+      "categoria": null,
+      "estoque": {
+        "fisico": 0,
+        "reservado": 0,
+        "disponivel": 0
+      },
+      "vendas": {
+        "vendas_30_dias": 0,
+        "venda_media_dia": 0
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 0
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 4026932001010,
+      "produto": "AJI-NO-MOTO® Frasco One Piece Law 100g",
+      "categoria": "Temperos e Caldos",
+      "estoque": {
+        "fisico": 96,
+        "reservado": 0,
+        "disponivel": 96
+      },
+      "vendas": {
+        "vendas_30_dias": 91,
+        "venda_media_dia": 3.033333
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 0
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 4026932001010,
+      "produto": "AJI-NO-MOTO® Frasco One Piece Law 100g",
+      "categoria": "One Piece",
+      "estoque": {
+        "fisico": 93,
+        "reservado": 0,
+        "disponivel": 93
+      },
+      "vendas": {
+        "vendas_30_dias": 91,
+        "venda_media_dia": 3.033333
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 0
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 4026933001019,
+      "produto": "AJI-NO-MOTO® Frasco One Piece Buggy 100g",
+      "categoria": "Temperos e Caldos",
+      "estoque": {
+        "fisico": 53,
+        "reservado": 0,
+        "disponivel": 53
+      },
+      "vendas": {
+        "vendas_30_dias": 37,
+        "venda_media_dia": 1.233333
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 0
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 4026933001019,
+      "produto": "AJI-NO-MOTO® Frasco One Piece Buggy 100g",
+      "categoria": "One Piece",
+      "estoque": {
+        "fisico": 0,
+        "reservado": 0,
+        "disponivel": 0
+      },
+      "vendas": {
+        "vendas_30_dias": 37,
+        "venda_media_dia": 1.233333
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 0
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 4026934001018,
+      "produto": "AJI-NO-MOTO® Frasco One Piece Shanks 100g",
+      "categoria": "Temperos e Caldos",
+      "estoque": {
+        "fisico": 0,
+        "reservado": 0,
+        "disponivel": 0
+      },
+      "vendas": {
+        "vendas_30_dias": 0,
+        "venda_media_dia": 0
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 0
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": "4026934001018-26934",
+      "produto": "AJI-NO-MOTO® Frasco One Piece Shanks 100g",
+      "categoria": "One Piece",
+      "estoque": {
+        "fisico": 0,
+        "reservado": 0,
+        "disponivel": 0
+      },
+      "vendas": {
+        "vendas_30_dias": 45,
+        "venda_media_dia": 1.5
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 0
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 4026935001017,
+      "produto": "not found",
+      "categoria": null,
+      "estoque": {
+        "fisico": 0,
+        "reservado": 0,
+        "disponivel": 0
+      },
+      "vendas": {
+        "vendas_30_dias": 0,
+        "venda_media_dia": 0
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 0
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 4026935001017,
+      "produto": "AJI-NO-MOTO® Frasco One Piece Ace 100g",
+      "categoria": "One Piece",
+      "estoque": {
+        "fisico": 0,
+        "reservado": 0,
+        "disponivel": 0
+      },
+      "vendas": {
+        "vendas_30_dias": 34,
+        "venda_media_dia": 1.133333
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 0
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 4026936001016,
+      "produto": "AJI-NO-MOTO® Frasco One Piece Sabo 100g",
+      "categoria": "Temperos e Caldos",
+      "estoque": {
+        "fisico": 0,
+        "reservado": 0,
+        "disponivel": 0
+      },
+      "vendas": {
+        "vendas_30_dias": 0,
+        "venda_media_dia": 0
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 7
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": "4026936001016-26936",
+      "produto": "AJI-NO-MOTO® Frasco One Piece Sabo 100g",
+      "categoria": "One Piece",
+      "estoque": {
+        "fisico": 0,
+        "reservado": 0,
+        "disponivel": 0
+      },
+      "vendas": {
+        "vendas_30_dias": 38,
+        "venda_media_dia": 1.266667
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 0
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 4901001200009,
+      "produto": "aminoVITAL® GOLD - 9 AMINOÁCIDOS - AJINOMOTO - 14 sachês",
+      "categoria": "Suplementos",
+      "estoque": {
+        "fisico": 124,
+        "reservado": 0,
+        "disponivel": 124
+      },
+      "vendas": {
+        "vendas_30_dias": 5,
+        "venda_media_dia": 0.166667
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 120.65
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132000012,
+      "produto": "SABOR A MI® RECEITA DE CASA SEM PIMENTA 450G",
+      "categoria": "Temperos e Caldos",
+      "estoque": {
+        "fisico": 31,
+        "reservado": 0,
+        "disponivel": 31
+      },
+      "vendas": {
+        "vendas_30_dias": 85,
+        "venda_media_dia": 2.833333
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 9.54
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132000029,
+      "produto": "SABOR A MI® RECEITA DE CASA COM PIMENTA 450G",
+      "categoria": "Temperos e Caldos",
+      "estoque": {
+        "fisico": 61,
+        "reservado": 0,
+        "disponivel": 61
+      },
+      "vendas": {
+        "vendas_30_dias": 2,
+        "venda_media_dia": 0.066667
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 9.54
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132000449,
+      "produto": "TEMPERO EM PÓ SAZÓN® PARA ARROZ 60G",
+      "categoria": "Temperos e Caldos",
+      "estoque": {
+        "fisico": 419,
+        "reservado": 0,
+        "disponivel": 419
+      },
+      "vendas": {
+        "vendas_30_dias": 34,
+        "venda_media_dia": 1.133333
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 4.37
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132000999,
+      "produto": "REFRESCO EM PÓ MID® ZERO SABOR LARANJA 10G",
+      "categoria": "Bebidas",
+      "estoque": {
+        "fisico": 128,
+        "reservado": 0,
+        "disponivel": 128
+      },
+      "vendas": {
+        "vendas_30_dias": 5,
+        "venda_media_dia": 0.166667
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 1.05
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132001019,
+      "produto": "REFRESCO EM PÓ MID® ZERO SABOR MARACUJÁ 8G",
+      "categoria": "Bebidas",
+      "estoque": {
+        "fisico": 79,
+        "reservado": 0,
+        "disponivel": 79
+      },
+      "vendas": {
+        "vendas_30_dias": 21,
+        "venda_media_dia": 0.7
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 1.05
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132001057,
+      "produto": "REFRESCO EM PÓ MID® ZERO SABOR TANGERINA 10G",
+      "categoria": "Bebidas",
+      "estoque": {
+        "fisico": 264,
+        "reservado": 0,
+        "disponivel": 264
+      },
+      "vendas": {
+        "vendas_30_dias": 14,
+        "venda_media_dia": 0.466667
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 1.05
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132001101,
+      "produto": "TEMPERO EM PÓ SAZÓN® SABORES DO NORDESTE 60G",
+      "categoria": "Temperos e Caldos",
+      "estoque": {
+        "fisico": 405,
+        "reservado": 0,
+        "disponivel": 405
+      },
+      "vendas": {
+        "vendas_30_dias": 45,
+        "venda_media_dia": 1.5
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 4.37
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132001286,
+      "produto": "REFRESCO EM PÓ MID® ZERO SABOR ABACAXI 8G",
+      "categoria": "Bebidas",
+      "estoque": {
+        "fisico": 625,
+        "reservado": 0,
+        "disponivel": 625
+      },
+      "vendas": {
+        "vendas_30_dias": 61,
+        "venda_media_dia": 2.033333
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 1.05
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132001354,
+      "produto": "TEMPERO SAZÓN® PROFISSIONAL PARA CARNES 900G",
+      "categoria": "Temperos e Caldos",
+      "estoque": {
+        "fisico": 33,
+        "reservado": 0,
+        "disponivel": 33
+      },
+      "vendas": {
+        "vendas_30_dias": 7,
+        "venda_media_dia": 0.233333
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 35.34
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132001378,
+      "produto": "TEMPERO SAZÓN® PROFISSIONAL PARA FRANGO 900G",
+      "categoria": "Temperos e Caldos",
+      "estoque": {
+        "fisico": 42,
+        "reservado": 0,
+        "disponivel": 42
+      },
+      "vendas": {
+        "vendas_30_dias": 1,
+        "venda_media_dia": 0.033333
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 35.34
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132001453,
+      "produto": "REFRESCO EM PÓ MID® ZERO SABOR MANGA 8G",
+      "categoria": "Bebidas",
+      "estoque": {
+        "fisico": 473,
+        "reservado": 0,
+        "disponivel": 473
+      },
+      "vendas": {
+        "vendas_30_dias": 18,
+        "venda_media_dia": 0.6
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 1.05
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132001460,
+      "produto": "REFRESCO EM PÓ MID® ZERO SABOR AMORA 8G",
+      "categoria": "Bebidas",
+      "estoque": {
+        "fisico": 100,
+        "reservado": 0,
+        "disponivel": 100
+      },
+      "vendas": {
+        "vendas_30_dias": 65,
+        "venda_media_dia": 2.166667
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 1.05
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132001552,
+      "produto": "TEMPERO ORIENTAL HONDASHI® AJINOMOTO 500G",
+      "categoria": "Temperos e Caldos",
+      "estoque": {
+        "fisico": 81,
+        "reservado": 0,
+        "disponivel": 81
+      },
+      "vendas": {
+        "vendas_30_dias": 7,
+        "venda_media_dia": 0.233333
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 46.52
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132001651,
+      "produto": "CREME DE CEBOLA AJINOMOTO® 1KG",
+      "categoria": "Food Service",
+      "estoque": {
+        "fisico": 34,
+        "reservado": 0,
+        "disponivel": 34
+      },
+      "vendas": {
+        "vendas_30_dias": 2,
+        "venda_media_dia": 0.066667
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 36.12
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132001774,
+      "produto": "TEMPERO SAZÓN® PROFISSIONAL PARA LEGUMES 900G",
+      "categoria": "Temperos e Caldos",
+      "estoque": {
+        "fisico": 40,
+        "reservado": 0,
+        "disponivel": 40
+      },
+      "vendas": {
+        "vendas_30_dias": 4,
+        "venda_media_dia": 0.133333
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 35.34
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132001903,
+      "produto": "MOLHO BRANCO BECHAMEL AJINOMOTO® 1KG",
+      "categoria": "Molhos e Azeites",
+      "estoque": {
+        "fisico": 31,
+        "reservado": 0,
+        "disponivel": 31
+      },
+      "vendas": {
+        "vendas_30_dias": 7,
+        "venda_media_dia": 0.233333
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 32.15
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132001910,
+      "produto": "MOLHO ESCURO DEMI-GLACE AJINOMOTO® 1KG",
+      "categoria": "Molhos e Azeites",
+      "estoque": {
+        "fisico": 54,
+        "reservado": 0,
+        "disponivel": 54
+      },
+      "vendas": {
+        "vendas_30_dias": 1,
+        "venda_media_dia": 0.033333
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 51.82
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132002504,
+      "produto": "PURÊ DE BATATAS AJINOMOTO® 1KG",
+      "categoria": "Food Service",
+      "estoque": {
+        "fisico": 0,
+        "reservado": 0,
+        "disponivel": 0
+      },
+      "vendas": {
+        "vendas_30_dias": 3,
+        "venda_media_dia": 0.1
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 48.96
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": "7891132002665-23616",
+      "produto": "AJI-SAL® TRADICIONAL 2kg",
+      "categoria": "Food Service",
+      "estoque": {
+        "fisico": 15,
+        "reservado": 0,
+        "disponivel": 15
+      },
+      "vendas": {
+        "vendas_30_dias": 6,
+        "venda_media_dia": 0.2
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 23.99
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132005833,
+      "produto": "CALDO EM PÓ SAZÓN® SABOR GALINHA 1,1KG",
+      "categoria": "Temperos e Caldos",
+      "estoque": {
+        "fisico": 0,
+        "reservado": 0,
+        "disponivel": 0
+      },
+      "vendas": {
+        "vendas_30_dias": 4,
+        "venda_media_dia": 0.133333
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 17.53
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132005840,
+      "produto": "CALDO EM PÓ SAZÓN® SABOR CARNES 1,1KG",
+      "categoria": "Temperos e Caldos",
+      "estoque": {
+        "fisico": 34,
+        "reservado": 0,
+        "disponivel": 34
+      },
+      "vendas": {
+        "vendas_30_dias": 1,
+        "venda_media_dia": 0.033333
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 17.53
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132005857,
+      "produto": "CALDO EM PÓ SAZÓN® SABOR LEGUMES 1,1KG",
+      "categoria": "Temperos e Caldos",
+      "estoque": {
+        "fisico": 28,
+        "reservado": 0,
+        "disponivel": 28
+      },
+      "vendas": {
+        "vendas_30_dias": 3,
+        "venda_media_dia": 0.1
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 17.53
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132005888,
+      "produto": "AMACIANTE  DE CARNE AJINOMOTO® 1,1KG",
+      "categoria": "Food Service",
+      "estoque": {
+        "fisico": 0,
+        "reservado": 0,
+        "disponivel": 0
+      },
+      "vendas": {
+        "vendas_30_dias": 0,
+        "venda_media_dia": 0
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 26.69
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": "7891132007486-23924",
+      "produto": "SOPA CREMOSA VONO® SABOR MILHO COM FRANGO 18G",
+      "categoria": "Sopas",
+      "estoque": {
+        "fisico": 62,
+        "reservado": 0,
+        "disponivel": 62
+      },
+      "vendas": {
+        "vendas_30_dias": 38,
+        "venda_media_dia": 1.266667
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 1.97
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132007509,
+      "produto": "SOPA CREMOSA VONO® SABOR BATATA COM CARNE 18G",
+      "categoria": "Sopas",
+      "estoque": {
+        "fisico": 19,
+        "reservado": 0,
+        "disponivel": 19
+      },
+      "vendas": {
+        "vendas_30_dias": 47,
+        "venda_media_dia": 1.566667
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 1.97
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132007523,
+      "produto": "SOPA CREMOSA VONO® SABOR PEITO DE FRANGO COM QUEIJO 17G",
+      "categoria": "Sopas",
+      "estoque": {
+        "fisico": 58,
+        "reservado": 0,
+        "disponivel": 58
+      },
+      "vendas": {
+        "vendas_30_dias": 7,
+        "venda_media_dia": 0.233333
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 1.97
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132007530,
+      "produto": "SOPA CREMOSA VONO® SABOR MANDIOQUINHA COM CEBOLA E SALSA 17G",
+      "categoria": "Sopas",
+      "estoque": {
+        "fisico": 157,
+        "reservado": 0,
+        "disponivel": 157
+      },
+      "vendas": {
+        "vendas_30_dias": 10,
+        "venda_media_dia": 0.333333
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 1.97
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132007554,
+      "produto": "SOPA CREMOSA VONO® SABOR ABÓBORA COM CARNE 17G",
+      "categoria": "Sopas",
+      "estoque": {
+        "fisico": 138,
+        "reservado": 0,
+        "disponivel": 138
+      },
+      "vendas": {
+        "vendas_30_dias": 21,
+        "venda_media_dia": 0.7
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 1.97
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132007561,
+      "produto": "SOPA CREMOSA VONO® SABOR CALDINHO DE FEIJÃO 18G",
+      "categoria": "Sopas",
+      "estoque": {
+        "fisico": 22,
+        "reservado": 0,
+        "disponivel": 22
+      },
+      "vendas": {
+        "vendas_30_dias": 58,
+        "venda_media_dia": 1.933333
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 1.97
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132008391,
+      "produto": "MOLHO SHOYU SATIS!® SABOR TRADICIONAL 150ML",
+      "categoria": "Molhos e Azeites",
+      "estoque": {
+        "fisico": 46,
+        "reservado": 0,
+        "disponivel": 46
+      },
+      "vendas": {
+        "vendas_30_dias": 16,
+        "venda_media_dia": 0.533333
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 3.96
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132008407,
+      "produto": "MOLHO SHOYU SATIS!® SABOR TRADICIONAL 500ML",
+      "categoria": "Molhos e Azeites",
+      "estoque": {
+        "fisico": 26,
+        "reservado": 0,
+        "disponivel": 26
+      },
+      "vendas": {
+        "vendas_30_dias": 23,
+        "venda_media_dia": 0.766667
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 12.24
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": "7891132008421-23937",
+      "produto": "MOLHO SHOYU SATIS!® PARA LEGUMES E VERDURAS 150ML",
+      "categoria": "Molhos e Azeites",
+      "estoque": {
+        "fisico": 45,
+        "reservado": 0,
+        "disponivel": 45
+      },
+      "vendas": {
+        "vendas_30_dias": 10,
+        "venda_media_dia": 0.333333
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 4.14
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132008438,
+      "produto": "MOLHO SHOYU SATIS!® PARA LEGUMES E VERDURAS 500ML",
+      "categoria": "Molhos e Azeites",
+      "estoque": {
+        "fisico": 54,
+        "reservado": 0,
+        "disponivel": 54
+      },
+      "vendas": {
+        "vendas_30_dias": 1,
+        "venda_media_dia": 0.033333
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 12.77
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132008698,
+      "produto": "TEMPERO EM PÓ SAZÓN® TOQUE ALHO 60G",
+      "categoria": "Temperos e Caldos",
+      "estoque": {
+        "fisico": 867,
+        "reservado": 0,
+        "disponivel": 867
+      },
+      "vendas": {
+        "vendas_30_dias": 20,
+        "venda_media_dia": 0.666667
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 4.37
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132008704,
+      "produto": "TEMPERO EM PÓ SAZÓN® TOQUE LIMAO 60G",
+      "categoria": "Temperos e Caldos",
+      "estoque": {
+        "fisico": 401,
+        "reservado": 0,
+        "disponivel": 401
+      },
+      "vendas": {
+        "vendas_30_dias": 10,
+        "venda_media_dia": 0.333333
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 4.37
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132008711,
+      "produto": "TEMPERO EM PÓ SAZÓN® TOQUE ALECRIM 60G",
+      "categoria": "Temperos e Caldos",
+      "estoque": {
+        "fisico": 407,
+        "reservado": 0,
+        "disponivel": 407
+      },
+      "vendas": {
+        "vendas_30_dias": 5,
+        "venda_media_dia": 0.166667
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 4.37
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132008995,
+      "produto": "SAZÓN® TEMPERA E EMPANA MILANESA SABOR TRADICIONAL 60G",
+      "categoria": "Farinhas, Cereais e Grãos",
+      "estoque": {
+        "fisico": 71,
+        "reservado": 0,
+        "disponivel": 71
+      },
+      "vendas": {
+        "vendas_30_dias": 29,
+        "venda_media_dia": 0.966667
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 3.7
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132009084,
+      "produto": "AZEITE DE OLIVA EXTRA VIRGEM TERRANO® 250ML",
+      "categoria": "Molhos e Azeites",
+      "estoque": {
+        "fisico": 482,
+        "reservado": 0,
+        "disponivel": 482
+      },
+      "vendas": {
+        "vendas_30_dias": 17,
+        "venda_media_dia": 0.566667
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 27.59
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132009091,
+      "produto": "AZEITE DE OLIVA EXTRA VIRGEM TERRANO® 500ml",
+      "categoria": "Molhos e Azeites",
+      "estoque": {
+        "fisico": 3367,
+        "reservado": 0,
+        "disponivel": 3367
+      },
+      "vendas": {
+        "vendas_30_dias": 154,
+        "venda_media_dia": 5.133333
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 49.46
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132009114,
+      "produto": "AZEITE DE OLIVA TIPO ÚNICO TERRANO® 500ML",
+      "categoria": "Molhos e Azeites",
+      "estoque": {
+        "fisico": 533,
+        "reservado": 0,
+        "disponivel": 533
+      },
+      "vendas": {
+        "vendas_30_dias": 19,
+        "venda_media_dia": 0.633333
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 42.81
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132009305,
+      "produto": "MOLHO DE TOMATE AJINOMOTO® 2KG",
+      "categoria": "Molhos e Azeites",
+      "estoque": {
+        "fisico": 36,
+        "reservado": 0,
+        "disponivel": 36
+      },
+      "vendas": {
+        "vendas_30_dias": 0,
+        "venda_media_dia": 0
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 23.62
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132009312,
+      "produto": "EXTRATO DE TOMATE AJINOMOTO® 2KG",
+      "categoria": "Food Service",
+      "estoque": {
+        "fisico": 0,
+        "reservado": 0,
+        "disponivel": 0
+      },
+      "vendas": {
+        "vendas_30_dias": 0,
+        "venda_media_dia": 0
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 27.69
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132009374,
+      "produto": "SOPA CREMOSA VONO® SABOR AIPIM COM COSTELA 18G",
+      "categoria": "Sopas",
+      "estoque": {
+        "fisico": 492,
+        "reservado": 0,
+        "disponivel": 492
+      },
+      "vendas": {
+        "vendas_30_dias": 67,
+        "venda_media_dia": 2.233333
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 1.97
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132009398,
+      "produto": "TEMPERO SAZÓN® PROFISSIONAL SABOR DE ALHO 900G",
+      "categoria": "Temperos e Caldos",
+      "estoque": {
+        "fisico": 34,
+        "reservado": 0,
+        "disponivel": 34
+      },
+      "vendas": {
+        "vendas_30_dias": 5,
+        "venda_media_dia": 0.166667
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 35.34
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132009404,
+      "produto": "TEMPERO SAZÓN® PROFISSIONAL TOQUE DE ALECRIM 900G",
+      "categoria": "Temperos e Caldos",
+      "estoque": {
+        "fisico": 16,
+        "reservado": 0,
+        "disponivel": 16
+      },
+      "vendas": {
+        "vendas_30_dias": 1,
+        "venda_media_dia": 0.033333
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 35.34
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": "7891132009442-23943",
+      "produto": "SAZÓN® TEMPERA E DÁ LIGA SABOR TRADICIONAL 60G",
+      "categoria": "Farinhas, Cereais e Grãos",
+      "estoque": {
+        "fisico": 302,
+        "reservado": 0,
+        "disponivel": 302
+      },
+      "vendas": {
+        "vendas_30_dias": 11,
+        "venda_media_dia": 0.366667
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 3.7
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132009626,
+      "produto": "SOPA CREMOSA VONO® CHEF SABOR CREME DE CEBOLA 58G",
+      "categoria": "Sopas",
+      "estoque": {
+        "fisico": 132,
+        "reservado": 0,
+        "disponivel": 132
+      },
+      "vendas": {
+        "vendas_30_dias": 14,
+        "venda_media_dia": 0.466667
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 4.3
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132009688,
+      "produto": "SOPA CREMOSA VONO® CHEF SABOR CREME DE QUEIJO 53G",
+      "categoria": "Sopas",
+      "estoque": {
+        "fisico": 156,
+        "reservado": 0,
+        "disponivel": 156
+      },
+      "vendas": {
+        "vendas_30_dias": 23,
+        "venda_media_dia": 0.766667
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 4.3
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132009961,
+      "produto": "REFRESCO EM PÓ MID® ZERO SABOR UVA 8G",
+      "categoria": "Bebidas",
+      "estoque": {
+        "fisico": 113,
+        "reservado": 0,
+        "disponivel": 113
+      },
+      "vendas": {
+        "vendas_30_dias": 23,
+        "venda_media_dia": 0.766667
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 1.05
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132009985,
+      "produto": "REFRESCO EM PÓ MID® ZERO SABOR LIMÃO 8G",
+      "categoria": "Bebidas",
+      "estoque": {
+        "fisico": 748,
+        "reservado": 0,
+        "disponivel": 748
+      },
+      "vendas": {
+        "vendas_30_dias": 122,
+        "venda_media_dia": 4.066667
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 1.05
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132010158,
+      "produto": "CALDO EM PÓ SAZÓN® SABOR FRUTOS DO MAR 1,1KG",
+      "categoria": "Temperos e Caldos",
+      "estoque": {
+        "fisico": 0,
+        "reservado": 0,
+        "disponivel": 0
+      },
+      "vendas": {
+        "vendas_30_dias": 0,
+        "venda_media_dia": 0
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 19.63
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132011018,
+      "produto": "AJI-NO-MOTO® FRASCO 100g",
+      "categoria": "Temperos e Caldos",
+      "estoque": {
+        "fisico": 0,
+        "reservado": 0,
+        "disponivel": 0
+      },
+      "vendas": {
+        "vendas_30_dias": 0,
+        "venda_media_dia": 0
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 7
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132012015,
+      "produto": "AJI-NO-MOTO® REFIL 100G",
+      "categoria": "Temperos e Caldos",
+      "estoque": {
+        "fisico": 9,
+        "reservado": 0,
+        "disponivel": 9
+      },
+      "vendas": {
+        "vendas_30_dias": 6,
+        "venda_media_dia": 0.2
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 4.58
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132013012,
+      "produto": "AJI-NO-MOTO® ESTOJO 200g",
+      "categoria": "Temperos e Caldos",
+      "estoque": {
+        "fisico": 10,
+        "reservado": 0,
+        "disponivel": 10
+      },
+      "vendas": {
+        "vendas_30_dias": 5,
+        "venda_media_dia": 0.166667
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 8.62
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132014019,
+      "produto": "AJI-NO-MOTO® PACOTE 500G",
+      "categoria": "Temperos e Caldos",
+      "estoque": {
+        "fisico": 8,
+        "reservado": 0,
+        "disponivel": 8
+      },
+      "vendas": {
+        "vendas_30_dias": 2,
+        "venda_media_dia": 0.066667
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 18.78
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132019021,
+      "produto": "TEMPERO SABOR A MI® ALHO E SAL 300G",
+      "categoria": "Temperos e Caldos",
+      "estoque": {
+        "fisico": 85,
+        "reservado": 0,
+        "disponivel": 85
+      },
+      "vendas": {
+        "vendas_30_dias": 2,
+        "venda_media_dia": 0.066667
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 4.32
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132019038,
+      "produto": "TEMPERO COMPLETO SABOR A MI® SEM PIMENTA 300G",
+      "categoria": "Temperos e Caldos",
+      "estoque": {
+        "fisico": 79,
+        "reservado": 0,
+        "disponivel": 79
+      },
+      "vendas": {
+        "vendas_30_dias": 4,
+        "venda_media_dia": 0.133333
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 4.32
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132019045,
+      "produto": "TEMPERO COMPLETO SABOR  A MI® COM PIMENTA 300G",
+      "categoria": "Temperos e Caldos",
+      "estoque": {
+        "fisico": 85,
+        "reservado": 0,
+        "disponivel": 85
+      },
+      "vendas": {
+        "vendas_30_dias": 2,
+        "venda_media_dia": 0.066667
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 4.32
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132019052,
+      "produto": "TEMPERO SABOR A MI® ALHO E SAL 1KG",
+      "categoria": "Food Service",
+      "estoque": {
+        "fisico": 33,
+        "reservado": 0,
+        "disponivel": 33
+      },
+      "vendas": {
+        "vendas_30_dias": 0,
+        "venda_media_dia": 0
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 13.64
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132019069,
+      "produto": "TEMPERO COMPLETO SABOR A MI® SEM PIMENTA 1KG",
+      "categoria": "Temperos e Caldos",
+      "estoque": {
+        "fisico": 0,
+        "reservado": 0,
+        "disponivel": 0
+      },
+      "vendas": {
+        "vendas_30_dias": 0,
+        "venda_media_dia": 0
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 13.64
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132019076,
+      "produto": "TEMPERO COMPLETO SABOR  A MI® COM PIMENTA 1KG",
+      "categoria": "Temperos e Caldos",
+      "estoque": {
+        "fisico": 44,
+        "reservado": 0,
+        "disponivel": 44
+      },
+      "vendas": {
+        "vendas_30_dias": 0,
+        "venda_media_dia": 0
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 13.64
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132019274,
+      "produto": "TEMPERO EM PÓ SAZÓN® PARA FRANGO 60G",
+      "categoria": "Temperos e Caldos",
+      "estoque": {
+        "fisico": 424,
+        "reservado": 0,
+        "disponivel": 424
+      },
+      "vendas": {
+        "vendas_30_dias": 10,
+        "venda_media_dia": 0.333333
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 4.37
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132019281,
+      "produto": "TEMPERO EM PÓ SAZÓN® PARA CARNES 60G",
+      "categoria": "Temperos e Caldos",
+      "estoque": {
+        "fisico": 587,
+        "reservado": 0,
+        "disponivel": 587
+      },
+      "vendas": {
+        "vendas_30_dias": 153,
+        "venda_media_dia": 5.1
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 4.37
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132019403,
+      "produto": "TEMPERO EM PÓ SAZÓN® PARA LEGUMES 60G",
+      "categoria": "Temperos e Caldos",
+      "estoque": {
+        "fisico": 1272,
+        "reservado": 0,
+        "disponivel": 1272
+      },
+      "vendas": {
+        "vendas_30_dias": 6,
+        "venda_media_dia": 0.2
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 4.37
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132019717,
+      "produto": "TEMPERO EM PÓ SAZÓN® PARA MASSAS 60G",
+      "categoria": "Temperos e Caldos",
+      "estoque": {
+        "fisico": 243,
+        "reservado": 0,
+        "disponivel": 243
+      },
+      "vendas": {
+        "vendas_30_dias": 133,
+        "venda_media_dia": 4.433333
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 4.37
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132019724,
+      "produto": "TEMPERO EM PÓ SAZÓN® PARA FEIJÃO 60G",
+      "categoria": "Temperos e Caldos",
+      "estoque": {
+        "fisico": 355,
+        "reservado": 0,
+        "disponivel": 355
+      },
+      "vendas": {
+        "vendas_30_dias": 60,
+        "venda_media_dia": 2
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 4.37
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132019731,
+      "produto": "TEMPERO EM PÓ SAZÓN® PARA SALADA 60G",
+      "categoria": "Temperos e Caldos",
+      "estoque": {
+        "fisico": 279,
+        "reservado": 0,
+        "disponivel": 279
+      },
+      "vendas": {
+        "vendas_30_dias": 136,
+        "venda_media_dia": 4.533333
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 4.37
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132020010,
+      "produto": "AJI-NO-MOTO® 2 KG",
+      "categoria": "Food Service",
+      "estoque": {
+        "fisico": 23,
+        "reservado": 0,
+        "disponivel": 23
+      },
+      "vendas": {
+        "vendas_30_dias": 2,
+        "venda_media_dia": 0.066667
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 64.24
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132040018,
+      "produto": "TEMPERO ORIENTAL HONDASHI® AJINOMOTO 60G",
+      "categoria": "Temperos e Caldos",
+      "estoque": {
+        "fisico": 571,
+        "reservado": 0,
+        "disponivel": 571
+      },
+      "vendas": {
+        "vendas_30_dias": 20,
+        "venda_media_dia": 0.666667
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 10.33
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132060566,
+      "produto": "HARMONIX®-F REALÇADOR DE SABOR 600G",
+      "categoria": "Food Service",
+      "estoque": {
+        "fisico": 84,
+        "reservado": 0,
+        "disponivel": 84
+      },
+      "vendas": {
+        "vendas_30_dias": 1,
+        "venda_media_dia": 0.033333
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 17.24
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132080014,
+      "produto": "AJI-SAL® TRADICIONAL 1kg",
+      "categoria": "Para o seu churrasco",
+      "estoque": {
+        "fisico": 9,
+        "reservado": 0,
+        "disponivel": 9
+      },
+      "vendas": {
+        "vendas_30_dias": 7,
+        "venda_media_dia": 0.233333
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 14.14
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132080021,
+      "produto": "AJI-SAL® PARA CHURRASCO 1KG",
+      "categoria": "Para o seu churrasco",
+      "estoque": {
+        "fisico": 70,
+        "reservado": 0,
+        "disponivel": 70
+      },
+      "vendas": {
+        "vendas_30_dias": 2,
+        "venda_media_dia": 0.066667
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 13.47
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132080038,
+      "produto": "AJI-SAL® PARA CHURRASCO 500G",
+      "categoria": "Para o seu churrasco",
+      "estoque": {
+        "fisico": 134,
+        "reservado": 0,
+        "disponivel": 134
+      },
+      "vendas": {
+        "vendas_30_dias": 18,
+        "venda_media_dia": 0.6
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 7.27
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132081011,
+      "produto": "AJI-SAL® TRADICIONAL 250G",
+      "categoria": "Para o seu churrasco",
+      "estoque": {
+        "fisico": 230,
+        "reservado": 0,
+        "disponivel": 230
+      },
+      "vendas": {
+        "vendas_30_dias": 4,
+        "venda_media_dia": 0.133333
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 4.49
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132082018,
+      "produto": "AJI-SAL® TRADICIONAL 100G",
+      "categoria": "Para o seu churrasco",
+      "estoque": {
+        "fisico": 0,
+        "reservado": 0,
+        "disponivel": 0
+      },
+      "vendas": {
+        "vendas_30_dias": 4,
+        "venda_media_dia": 0.133333
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 5.98
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132082155,
+      "produto": "TEMPERO EM PÓ SAZÓN® PIPOCA SABOR CEBOLA E SALSA 60G",
+      "categoria": "Temperos e Caldos",
+      "estoque": {
+        "fisico": 267,
+        "reservado": 0,
+        "disponivel": 267
+      },
+      "vendas": {
+        "vendas_30_dias": 66,
+        "venda_media_dia": 2.2
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 4.37
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132082223,
+      "produto": "REFRESCO EM PÓ MID® SABOR LIMÃO 20G",
+      "categoria": "Bebidas",
+      "estoque": {
+        "fisico": 959,
+        "reservado": 0,
+        "disponivel": 959
+      },
+      "vendas": {
+        "vendas_30_dias": 10,
+        "venda_media_dia": 0.333333
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 0.91
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132082261,
+      "produto": "REFRESCO EM PÓ MID® SABOR GOIABA 20G",
+      "categoria": "Bebidas",
+      "estoque": {
+        "fisico": 1145,
+        "reservado": 0,
+        "disponivel": 1145
+      },
+      "vendas": {
+        "vendas_30_dias": 6,
+        "venda_media_dia": 0.2
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 0.91
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132082285,
+      "produto": "REFRESCO EM PÓ MID® SABOR GROSELHA 20g",
+      "categoria": "Bebidas",
+      "estoque": {
+        "fisico": 961,
+        "reservado": 0,
+        "disponivel": 961
+      },
+      "vendas": {
+        "vendas_30_dias": 17,
+        "venda_media_dia": 0.566667
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 0.91
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132082308,
+      "produto": "REFRESCO EM PÓ MID® SABOR JABUTICABA 20G",
+      "categoria": "Bebidas",
+      "estoque": {
+        "fisico": 600,
+        "reservado": 0,
+        "disponivel": 600
+      },
+      "vendas": {
+        "vendas_30_dias": 17,
+        "venda_media_dia": 0.566667
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 0.91
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132082322,
+      "produto": "REFRESCO EM PÓ MID® SABOR LARANJA 20G",
+      "categoria": "Bebidas",
+      "estoque": {
+        "fisico": 1085,
+        "reservado": 0,
+        "disponivel": 1085
+      },
+      "vendas": {
+        "vendas_30_dias": 5,
+        "venda_media_dia": 0.166667
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 0.91
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132082346,
+      "produto": "REFRESCO EM PÓ MID® SABOR UVA 20G",
+      "categoria": "Bebidas",
+      "estoque": {
+        "fisico": 775,
+        "reservado": 0,
+        "disponivel": 775
+      },
+      "vendas": {
+        "vendas_30_dias": 20,
+        "venda_media_dia": 0.666667
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 0.91
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132082360,
+      "produto": "REFRESCO EM PÓ MID® SABOR MARACUJÁ 20G",
+      "categoria": "Bebidas",
+      "estoque": {
+        "fisico": 842,
+        "reservado": 0,
+        "disponivel": 842
+      },
+      "vendas": {
+        "vendas_30_dias": 11,
+        "venda_media_dia": 0.366667
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 0.91
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132082384,
+      "produto": "REFRESCO EM PÓ MID® SABOR MORANGO 20G",
+      "categoria": "Bebidas",
+      "estoque": {
+        "fisico": 753,
+        "reservado": 0,
+        "disponivel": 753
+      },
+      "vendas": {
+        "vendas_30_dias": 16,
+        "venda_media_dia": 0.533333
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 0.91
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132082407,
+      "produto": "REFRESCO EM PÓ MID® SABOR ABACAXI 20G",
+      "categoria": "Bebidas",
+      "estoque": {
+        "fisico": 995,
+        "reservado": 0,
+        "disponivel": 995
+      },
+      "vendas": {
+        "vendas_30_dias": 10,
+        "venda_media_dia": 0.333333
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 0.91
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132082421,
+      "produto": "REFRESCO EM PÓ MID® SABOR BAUNILHA COM LIMÃO 20g",
+      "categoria": "Bebidas",
+      "estoque": {
+        "fisico": 788,
+        "reservado": 0,
+        "disponivel": 788
+      },
+      "vendas": {
+        "vendas_30_dias": 17,
+        "venda_media_dia": 0.566667
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 0.91
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132082445,
+      "produto": "REFRESCO EM PÓ MID® SABOR TANGERINA 20G",
+      "categoria": "Bebidas",
+      "estoque": {
+        "fisico": 1068,
+        "reservado": 0,
+        "disponivel": 1068
+      },
+      "vendas": {
+        "vendas_30_dias": 20,
+        "venda_media_dia": 0.666667
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 0.91
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132082469,
+      "produto": "REFRESCO EM PÓ MID® SABOR CAJÚ 20G",
+      "categoria": "Bebidas",
+      "estoque": {
+        "fisico": 664,
+        "reservado": 0,
+        "disponivel": 664
+      },
+      "vendas": {
+        "vendas_30_dias": 8,
+        "venda_media_dia": 0.266667
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 0.91
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132082483,
+      "produto": "REFRESCO EM PÓ MID® SABOR MANGA 20G",
+      "categoria": "Bebidas",
+      "estoque": {
+        "fisico": 1050,
+        "reservado": 0,
+        "disponivel": 1050
+      },
+      "vendas": {
+        "vendas_30_dias": 1,
+        "venda_media_dia": 0.033333
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 0.91
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132082520,
+      "produto": "REFRESCO EM PÓ MID® SABOR GRAVIOLA 20G",
+      "categoria": "Bebidas",
+      "estoque": {
+        "fisico": 678,
+        "reservado": 0,
+        "disponivel": 678
+      },
+      "vendas": {
+        "vendas_30_dias": 5,
+        "venda_media_dia": 0.166667
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 0.91
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132082568,
+      "produto": "REFRESCO EM PÓ MID® SABOR GUARANÁ 20G",
+      "categoria": "Bebidas",
+      "estoque": {
+        "fisico": 721,
+        "reservado": 0,
+        "disponivel": 721
+      },
+      "vendas": {
+        "vendas_30_dias": 77,
+        "venda_media_dia": 2.566667
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 0.91
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132082810,
+      "produto": "MISTURA COMPLETA PARA MILANESA AJINOMOTO®  800G",
+      "categoria": "Culinários",
+      "estoque": {
+        "fisico": 45,
+        "reservado": 0,
+        "disponivel": 45
+      },
+      "vendas": {
+        "vendas_30_dias": 3,
+        "venda_media_dia": 0.1
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 30.26
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132082988,
+      "produto": "AJI-SAL® PARRILLA PARA CHURRASCO 500G",
+      "categoria": "Para o seu churrasco",
+      "estoque": {
+        "fisico": 46,
+        "reservado": 0,
+        "disponivel": 46
+      },
+      "vendas": {
+        "vendas_30_dias": 29,
+        "venda_media_dia": 0.966667
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 21.92
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132083008,
+      "produto": "TEMPERO EM PÓ SAZÓN® PARA LEGUMES 40G",
+      "categoria": "Temperos e Caldos",
+      "estoque": {
+        "fisico": 686,
+        "reservado": 0,
+        "disponivel": 686
+      },
+      "vendas": {
+        "vendas_30_dias": 5,
+        "venda_media_dia": 0.166667
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 3.35
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132083015,
+      "produto": "TEMPERO EM PÓ SAZÓN® SABORES DO NORDESTE 40G",
+      "categoria": "Temperos e Caldos",
+      "estoque": {
+        "fisico": 460,
+        "reservado": 0,
+        "disponivel": 460
+      },
+      "vendas": {
+        "vendas_30_dias": 2,
+        "venda_media_dia": 0.066667
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 3.35
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132083022,
+      "produto": "TEMPERO EM PÓ SAZÓN® PARA FRANGO 40G",
+      "categoria": "Temperos e Caldos",
+      "estoque": {
+        "fisico": 780,
+        "reservado": 0,
+        "disponivel": 780
+      },
+      "vendas": {
+        "vendas_30_dias": 3,
+        "venda_media_dia": 0.1
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 3.35
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132083039,
+      "produto": "SOPA CREMOSA VONO® CHEF SABOR CREME DE CEBOLA MENOS SÓDIO 58G",
+      "categoria": "Menos sódio",
+      "estoque": {
+        "fisico": 231,
+        "reservado": 0,
+        "disponivel": 231
+      },
+      "vendas": {
+        "vendas_30_dias": 15,
+        "venda_media_dia": 0.5
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 4.46
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132083053,
+      "produto": "TEMPERO EM PÓ SAZÓN® PIPOCA SABOR MANTEIGA 60G",
+      "categoria": "Temperos e Caldos",
+      "estoque": {
+        "fisico": 89,
+        "reservado": 0,
+        "disponivel": 89
+      },
+      "vendas": {
+        "vendas_30_dias": 130,
+        "venda_media_dia": 4.333333
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 4.37
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132083060,
+      "produto": "TEMPERO EM PÓ SAZÓN® PIPOCA SABOR CHURRASCO 60G",
+      "categoria": "Temperos e Caldos",
+      "estoque": {
+        "fisico": 767,
+        "reservado": 0,
+        "disponivel": 767
+      },
+      "vendas": {
+        "vendas_30_dias": 47,
+        "venda_media_dia": 1.566667
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 4.37
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132083084,
+      "produto": "REFRESCO EM PÓ MID® SABOR LARANJA DOCE 20G",
+      "categoria": "Bebidas",
+      "estoque": {
+        "fisico": 972,
+        "reservado": 0,
+        "disponivel": 972
+      },
+      "vendas": {
+        "vendas_30_dias": 31,
+        "venda_media_dia": 1.033333
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 0.91
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132083107,
+      "produto": "REFRESCO EM PÓ MID® SABOR LIMONADA SUIÇA 20G",
+      "categoria": "Bebidas",
+      "estoque": {
+        "fisico": 1058,
+        "reservado": 0,
+        "disponivel": 1058
+      },
+      "vendas": {
+        "vendas_30_dias": 20,
+        "venda_media_dia": 0.666667
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 0.91
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132110094,
+      "produto": "aminoVITAL® GOLD Drink Mix Limão - Ajinomoto 15 sachês",
+      "categoria": "Suplementos",
+      "estoque": {
+        "fisico": 406,
+        "reservado": 0,
+        "disponivel": 406
+      },
+      "vendas": {
+        "vendas_30_dias": 1,
+        "venda_media_dia": 0.033333
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 0
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132110094,
+      "produto": "AMINO VITAL GOLD DRINK LIMÃO",
+      "categoria": "Suplementos",
+      "estoque": {
+        "fisico": 3542,
+        "reservado": 0,
+        "disponivel": 3542
+      },
+      "vendas": {
+        "vendas_30_dias": 1,
+        "venda_media_dia": 0.033333
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 0
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132110131,
+      "produto": "TEMPERO SAZÓN® PROFISSIONAL DE LOURO E TOQUE DE ERVAS 900G",
+      "categoria": "Temperos e Caldos",
+      "estoque": {
+        "fisico": 32,
+        "reservado": 0,
+        "disponivel": 32
+      },
+      "vendas": {
+        "vendas_30_dias": 5,
+        "venda_media_dia": 0.166667
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 42.44
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132110148,
+      "produto": "TEMPERO SAZÓN® PROFISSIONAL DE ORÉGANO E MANJERICÃO 900GR",
+      "categoria": "Temperos e Caldos",
+      "estoque": {
+        "fisico": 34,
+        "reservado": 0,
+        "disponivel": 34
+      },
+      "vendas": {
+        "vendas_30_dias": 2,
+        "venda_media_dia": 0.066667
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 42.44
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132110186,
+      "produto": "CALDO EM PÓ SAZÓN® SABOR BACON 32,5G",
+      "categoria": "Temperos e Caldos",
+      "estoque": {
+        "fisico": 1140,
+        "reservado": 0,
+        "disponivel": 1140
+      },
+      "vendas": {
+        "vendas_30_dias": 29,
+        "venda_media_dia": 0.966667
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 1.71
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132110193,
+      "produto": "CALDO EM PÓ SAZÓN® SABOR CAMARÃO 32,5G",
+      "categoria": "Temperos e Caldos",
+      "estoque": {
+        "fisico": 1366,
+        "reservado": 0,
+        "disponivel": 1366
+      },
+      "vendas": {
+        "vendas_30_dias": 26,
+        "venda_media_dia": 0.866667
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 1.71
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132110209,
+      "produto": "CALDO EM PÓ SAZÓN® LEV SABOR CARNE 32,5G",
+      "categoria": "Temperos e Caldos",
+      "estoque": {
+        "fisico": 1440,
+        "reservado": 0,
+        "disponivel": 1440
+      },
+      "vendas": {
+        "vendas_30_dias": 8,
+        "venda_media_dia": 0.266667
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 1.97
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132110216,
+      "produto": "CALDO EM PÓ SAZÓN® SABOR CARNE 32,5G",
+      "categoria": "Temperos e Caldos",
+      "estoque": {
+        "fisico": 1510,
+        "reservado": 0,
+        "disponivel": 1510
+      },
+      "vendas": {
+        "vendas_30_dias": 34,
+        "venda_media_dia": 1.133333
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 1.71
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132110223,
+      "produto": "CALDO EM PÓ SAZÓN® SABOR COSTELA 32,5G",
+      "categoria": "Temperos e Caldos",
+      "estoque": {
+        "fisico": 1089,
+        "reservado": 0,
+        "disponivel": 1089
+      },
+      "vendas": {
+        "vendas_30_dias": 115,
+        "venda_media_dia": 3.833333
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 1.71
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132110230,
+      "produto": "CALDO EM PÓ SAZÓN® SABOR GALINHA 32,5G",
+      "categoria": "Temperos e Caldos",
+      "estoque": {
+        "fisico": 869,
+        "reservado": 0,
+        "disponivel": 869
+      },
+      "vendas": {
+        "vendas_30_dias": 49,
+        "venda_media_dia": 1.633333
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 1.71
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132110247,
+      "produto": "CALDO EM PÓ SAZÓN® SABOR LEGUMES 32,5G",
+      "categoria": "Temperos e Caldos",
+      "estoque": {
+        "fisico": 1192,
+        "reservado": 0,
+        "disponivel": 1192
+      },
+      "vendas": {
+        "vendas_30_dias": 64,
+        "venda_media_dia": 2.133333
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 1.71
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132110254,
+      "produto": "SOPA CREMOSA VONO® SABOR ABÓBORA COM CARNE MENOS SÓDIO 17G",
+      "categoria": "Menos sódio",
+      "estoque": {
+        "fisico": 345,
+        "reservado": 0,
+        "disponivel": 345
+      },
+      "vendas": {
+        "vendas_30_dias": 18,
+        "venda_media_dia": 0.6
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 2.8
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132110261,
+      "produto": "CALDO EM PÓ SAZÓN® SABOR PICANHA 32,5G",
+      "categoria": "Temperos e Caldos",
+      "estoque": {
+        "fisico": 828,
+        "reservado": 0,
+        "disponivel": 828
+      },
+      "vendas": {
+        "vendas_30_dias": 44,
+        "venda_media_dia": 1.466667
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 1.71
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132110278,
+      "produto": "CALDO EM PÓ SAZÓN® LEV SABOR GALINHA 32,5G",
+      "categoria": "Temperos e Caldos",
+      "estoque": {
+        "fisico": 1523,
+        "reservado": 0,
+        "disponivel": 1523
+      },
+      "vendas": {
+        "vendas_30_dias": 22,
+        "venda_media_dia": 0.733333
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 1.97
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132110285,
+      "produto": "SOPA CREMOSA VONO® SABOR BATATA COM CARNE MENOS SÓDIO 18G",
+      "categoria": "Menos sódio",
+      "estoque": {
+        "fisico": 338,
+        "reservado": 0,
+        "disponivel": 338
+      },
+      "vendas": {
+        "vendas_30_dias": 27,
+        "venda_media_dia": 0.9
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 2.8
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132110551,
+      "produto": "SOPA CREMOSA VONO® SABOR MANDIOQUINHA COM CEBOLA E SALSA MENOS SÓDIO 17G",
+      "categoria": "Menos sódio",
+      "estoque": {
+        "fisico": 311,
+        "reservado": 0,
+        "disponivel": 311
+      },
+      "vendas": {
+        "vendas_30_dias": 12,
+        "venda_media_dia": 0.4
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 2.8
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132161249,
+      "produto": "AJI-SAL® PARA CHURRASCO POTE 500G",
+      "categoria": "Para o seu churrasco",
+      "estoque": {
+        "fisico": 223,
+        "reservado": 0,
+        "disponivel": 223
+      },
+      "vendas": {
+        "vendas_30_dias": 1,
+        "venda_media_dia": 0.033333
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 14.53
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132161287,
+      "produto": "SOPA CREMOSA VONO® PROTEÍNA SABOR FEIJÃO COM COUVE 35G",
+      "categoria": "Sopas",
+      "estoque": {
+        "fisico": 33,
+        "reservado": 0,
+        "disponivel": 33
+      },
+      "vendas": {
+        "vendas_30_dias": 15,
+        "venda_media_dia": 0.5
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 7.38
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132161294,
+      "produto": "SOPA CREMOSA VONO® PROTEÍNA SABOR LEGUMES COM CHIA 35G",
+      "categoria": "Sopas",
+      "estoque": {
+        "fisico": 105,
+        "reservado": 0,
+        "disponivel": 105
+      },
+      "vendas": {
+        "vendas_30_dias": 26,
+        "venda_media_dia": 0.866667
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 7.38
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132161317,
+      "produto": "SOPA CREMOSA VONO® PROTEÍNA SABOR MANDIOQUINHA COM FRANGO 35G",
+      "categoria": "Sopas",
+      "estoque": {
+        "fisico": 312,
+        "reservado": 0,
+        "disponivel": 312
+      },
+      "vendas": {
+        "vendas_30_dias": 20,
+        "venda_media_dia": 0.666667
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 7.38
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132165087,
+      "produto": "SOPA CREMOSA VONO® SABOR MILHO COM FRANGO MENOS SÓDIO 18G",
+      "categoria": "Menos sódio",
+      "estoque": {
+        "fisico": 312,
+        "reservado": 0,
+        "disponivel": 312
+      },
+      "vendas": {
+        "vendas_30_dias": 16,
+        "venda_media_dia": 0.533333
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 2.8
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132165100,
+      "produto": "aminoVITAL® GOLD Drink Mix Ajinomoto Sabor Tangerina - 1 sachê",
+      "categoria": "Suplementos",
+      "estoque": {
+        "fisico": 11,
+        "reservado": 0,
+        "disponivel": 11
+      },
+      "vendas": {
+        "vendas_30_dias": 2,
+        "venda_media_dia": 0.066667
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 0
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132165100,
+      "produto": "AminoVITAL® GOLD Drink Mix Tangerina Ajinomoto",
+      "categoria": "Suplementos",
+      "estoque": {
+        "fisico": 4585,
+        "reservado": 0,
+        "disponivel": 4585
+      },
+      "vendas": {
+        "vendas_30_dias": 2,
+        "venda_media_dia": 0.066667
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 94.39
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132165124,
+      "produto": "AminoVITAL GOLD Drink Mix Frutas Vermelhas",
+      "categoria": "Suplementos",
+      "estoque": {
+        "fisico": 3,
+        "reservado": 0,
+        "disponivel": 3
+      },
+      "vendas": {
+        "vendas_30_dias": 3,
+        "venda_media_dia": 0.1
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 94.39
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132165124,
+      "produto": "aminoVITAL® GOLD Drink Mix Frutas Vermelhas - Ajinomoto 1 sachê",
+      "categoria": "Suplementos",
+      "estoque": {
+        "fisico": 409,
+        "reservado": 0,
+        "disponivel": 409
+      },
+      "vendas": {
+        "vendas_30_dias": 3,
+        "venda_media_dia": 0.1
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 0
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132165124,
+      "produto": "AMINO VITAL GOLD DRINK FRUTAS VERMELHAS",
+      "categoria": "Suplementos",
+      "estoque": {
+        "fisico": 1780,
+        "reservado": 0,
+        "disponivel": 1780
+      },
+      "vendas": {
+        "vendas_30_dias": 3,
+        "venda_media_dia": 0.1
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 0
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132165148,
+      "produto": "SOPA CREMOSA VONO® SABOR PEITO DE FRANGO COM QUEIJO MENOS SÓDIO 17G",
+      "categoria": "Menos sódio",
+      "estoque": {
+        "fisico": 365,
+        "reservado": 0,
+        "disponivel": 365
+      },
+      "vendas": {
+        "vendas_30_dias": 18,
+        "venda_media_dia": 0.6
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 2.8
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132165209,
+      "produto": "TEMPERO EM PÓ SAZÓN® PARA CARNES 40G",
+      "categoria": "Temperos e Caldos",
+      "estoque": {
+        "fisico": 653,
+        "reservado": 0,
+        "disponivel": 653
+      },
+      "vendas": {
+        "vendas_30_dias": 8,
+        "venda_media_dia": 0.266667
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 3.35
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132165223,
+      "produto": "MOLHO SHOYU PROFISSIONAL SATIS!® TRADICIONAL 870ML",
+      "categoria": "Molhos e Azeites",
+      "estoque": {
+        "fisico": 31,
+        "reservado": 0,
+        "disponivel": 31
+      },
+      "vendas": {
+        "vendas_30_dias": 0,
+        "venda_media_dia": 0
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 14.81
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132165261,
+      "produto": "AJISAL® PARA CHURRASCO PARRILLA PIMENTA",
+      "categoria": "Para o seu churrasco",
+      "estoque": {
+        "fisico": 41,
+        "reservado": 0,
+        "disponivel": 41
+      },
+      "vendas": {
+        "vendas_30_dias": 11,
+        "venda_media_dia": 0.366667
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 15.98
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132165285,
+      "produto": "SAZÓN® TEMPERA & RENDE MAIS 40g",
+      "categoria": "Temperos e Caldos",
+      "estoque": {
+        "fisico": 237,
+        "reservado": 0,
+        "disponivel": 237
+      },
+      "vendas": {
+        "vendas_30_dias": 6,
+        "venda_media_dia": 0.2
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 3.77
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132165407,
+      "produto": "TEMPERO SAZÓN® MEU TOQUE CASEIRO POTE 32g",
+      "categoria": "Temperos e Caldos",
+      "estoque": {
+        "fisico": 262,
+        "reservado": 0,
+        "disponivel": 262
+      },
+      "vendas": {
+        "vendas_30_dias": 40,
+        "venda_media_dia": 1.333333
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 9.02
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132165421,
+      "produto": "TEMPERO SAZÓN® MEU TOQUE ERVAS POTE 20g",
+      "categoria": "Temperos e Caldos",
+      "estoque": {
+        "fisico": 435,
+        "reservado": 0,
+        "disponivel": 435
+      },
+      "vendas": {
+        "vendas_30_dias": 41,
+        "venda_media_dia": 1.366667
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 9.02
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132165445,
+      "produto": "TEMPERO SAZÓN® MEU TOQUE TOMATE POTE 23g",
+      "categoria": "Temperos e Caldos",
+      "estoque": {
+        "fisico": 641,
+        "reservado": 0,
+        "disponivel": 641
+      },
+      "vendas": {
+        "vendas_30_dias": 37,
+        "venda_media_dia": 1.233333
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 9.02
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132165575,
+      "produto": "TEMPERO SAZÓN® MEU TOQUE CASEIRO POUCH 16g",
+      "categoria": "Temperos e Caldos",
+      "estoque": {
+        "fisico": 129,
+        "reservado": 0,
+        "disponivel": 129
+      },
+      "vendas": {
+        "vendas_30_dias": 5,
+        "venda_media_dia": 0.166667
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 5.59
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132165599,
+      "produto": "TEMPERO SAZÓN® MEU TOQUE ERVAS POUCH 10g",
+      "categoria": "Temperos e Caldos",
+      "estoque": {
+        "fisico": 0,
+        "reservado": 0,
+        "disponivel": 0
+      },
+      "vendas": {
+        "vendas_30_dias": 1,
+        "venda_media_dia": 0.033333
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 5.59
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132165612,
+      "produto": "TEMPERO SAZÓN® MEU TOQUE TOMATE POUCH 12g",
+      "categoria": "Temperos e Caldos",
+      "estoque": {
+        "fisico": 209,
+        "reservado": 0,
+        "disponivel": 209
+      },
+      "vendas": {
+        "vendas_30_dias": 3,
+        "venda_media_dia": 0.1
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 5.59
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132165636,
+      "produto": "TEMPERO SAZÓN® NA MEDIDA COM 10 VEGETAIS 30g",
+      "categoria": "Temperos e Caldos",
+      "estoque": {
+        "fisico": 1365,
+        "reservado": 0,
+        "disponivel": 1365
+      },
+      "vendas": {
+        "vendas_30_dias": 14,
+        "venda_media_dia": 0.466667
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 2.91
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132165650,
+      "produto": "TEMPERO SAZÓN® NA MEDIDA COM CHEIRO VERDE 30g",
+      "categoria": "Temperos e Caldos",
+      "estoque": {
+        "fisico": 153,
+        "reservado": 0,
+        "disponivel": 153
+      },
+      "vendas": {
+        "vendas_30_dias": 22,
+        "venda_media_dia": 0.733333
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 2.91
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132165674,
+      "produto": "TEMPERO SAZÓN® NA MEDIDA COM TOMATE 30g",
+      "categoria": "Temperos e Caldos",
+      "estoque": {
+        "fisico": 527,
+        "reservado": 0,
+        "disponivel": 527
+      },
+      "vendas": {
+        "vendas_30_dias": 13,
+        "venda_media_dia": 0.433333
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 2.91
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132165728,
+      "produto": "MOLHO PARA GYOZA SATIS!®",
+      "categoria": "Molhos e Azeites",
+      "estoque": {
+        "fisico": 1,
+        "reservado": 0,
+        "disponivel": 1
+      },
+      "vendas": {
+        "vendas_30_dias": 1,
+        "venda_media_dia": 0.033333
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 17.9
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132165773,
+      "produto": "aminoVITAL® Energy Gel - Frutas Cítricas - Com Cafeína 1 Sachê",
+      "categoria": "Suplementos",
+      "estoque": {
+        "fisico": 7,
+        "reservado": 0,
+        "disponivel": 7
+      },
+      "vendas": {
+        "vendas_30_dias": 12,
+        "venda_media_dia": 0.4
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 0
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132165834,
+      "produto": "SAZÓN® TEMPERA E TRANSFORMA ALHO E CEBOLA 16g",
+      "categoria": "Temperos e Caldos",
+      "estoque": {
+        "fisico": 232,
+        "reservado": 0,
+        "disponivel": 232
+      },
+      "vendas": {
+        "vendas_30_dias": 17,
+        "venda_media_dia": 0.566667
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 2.44
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132165858,
+      "produto": "SAZÓN® TEMPERA E TRANSFORMA QUEIJO 16g",
+      "categoria": "Temperos e Caldos",
+      "estoque": {
+        "fisico": 641,
+        "reservado": 0,
+        "disponivel": 641
+      },
+      "vendas": {
+        "vendas_30_dias": 23,
+        "venda_media_dia": 0.766667
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 2.44
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132165872,
+      "produto": "SAZÓN® TEMPERA E TRANSFORMA TOMATE 16g",
+      "categoria": "Temperos e Caldos",
+      "estoque": {
+        "fisico": 308,
+        "reservado": 0,
+        "disponivel": 308
+      },
+      "vendas": {
+        "vendas_30_dias": 15,
+        "venda_media_dia": 0.5
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 2.44
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132165926,
+      "produto": "CALDO EM PÓ SAZÓN® ENVELOPE SABOR GALINHA 11G",
+      "categoria": "Temperos e Caldos",
+      "estoque": {
+        "fisico": 734,
+        "reservado": 0,
+        "disponivel": 734
+      },
+      "vendas": {
+        "vendas_30_dias": 60,
+        "venda_media_dia": 2
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 0.77
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132165964,
+      "produto": "CALDO EM PÓ SAZÓN® ENVELOPE SABOR CARNE 11G",
+      "categoria": "Temperos e Caldos",
+      "estoque": {
+        "fisico": 1290,
+        "reservado": 0,
+        "disponivel": 1290
+      },
+      "vendas": {
+        "vendas_30_dias": 91,
+        "venda_media_dia": 3.033333
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 0.77
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": "7891132165988-26643",
+      "produto": "AMINOMOV MARACUJA 11G",
+      "categoria": "Suplementos",
+      "estoque": {
+        "fisico": 0,
+        "reservado": 0,
+        "disponivel": 0
+      },
+      "vendas": {
+        "vendas_30_dias": 0,
+        "venda_media_dia": 0
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 0
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132166046,
+      "produto": "CALDO EM PÓ SAZÓN® SABOR BACON 1,010KG",
+      "categoria": "Food Service",
+      "estoque": {
+        "fisico": 43,
+        "reservado": 0,
+        "disponivel": 43
+      },
+      "vendas": {
+        "vendas_30_dias": 6,
+        "venda_media_dia": 0.2
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 17.53
+      }
+    },
+    {
+      "snapshot_date": "2026-05-27",
+      "sku": 7891132166350,
+      "produto": "Tempero SAZÓN® para Batata Frita sabor Cheddar e Bacon 60g",
+      "categoria": "Temperos e Caldos",
+      "estoque": {
+        "fisico": 1194,
+        "reservado": 0,
+        "disponivel": 1194
+      },
+      "vendas": {
+        "vendas_30_dias": 4,
+        "venda_media_dia": 0.133333
+      },
+      "abastecimento": {
+        "lead_time": null
+      },
+      "financeiro": {
+        "custo_unitario": 0
+      }
+    }
+  ]
+}
