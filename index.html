@@ -1215,7 +1215,32 @@
     const file = fileInput.files?.[0];
     if (file) await processFile(file);
   });
+//
+// Auto load CSV from GitHub
+//
+window.addEventListener("DOMContentLoaded", async () => {
+  try {
+    const response = await fetch("./snapshot_estoque.csv");
 
+    if (!response.ok) {
+      throw new Error("CSV não encontrado.");
+    }
+
+    const csvText = await response.text();
+
+    // Cria arquivo virtual
+    const blob = new Blob([csvText], { type: "text/csv" });
+    const file = new File([blob], "snapshot_estoque.csv", {
+      type: "text/csv",
+    });
+
+    await processFile(file);
+
+    console.log("CSV carregado automaticamente!");
+  } catch (error) {
+    console.error("Erro ao carregar CSV automático:", error);
+  }
+});
   // Parameters change triggers recompute if we have data
   [safetyMonthsEl, criticalMonthsEl, leadTimeDaysEl].forEach(el => {
     el.addEventListener("change", () => {
