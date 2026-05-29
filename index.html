@@ -1228,13 +1228,19 @@ window.addEventListener("DOMContentLoaded", async () => {
 
     const csvText = await response.text();
 
-    // Cria arquivo virtual
+    // Simula upload do arquivo
     const blob = new Blob([csvText], { type: "text/csv" });
     const file = new File([blob], "snapshot_estoque.csv", {
       type: "text/csv",
     });
 
-    await processFile(file);
+    const dataTransfer = new DataTransfer();
+    dataTransfer.items.add(file);
+
+    fileInput.files = dataTransfer.files;
+
+    // dispara mesmo fluxo do upload manual
+    fileInput.dispatchEvent(new Event("change"));
 
     console.log("CSV carregado automaticamente!");
   } catch (error) {
