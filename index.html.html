@@ -1,0 +1,1299 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dashboard Estoque • Executive Dark</title>
+
+  <!-- Excel (SheetJS) -->
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.19.3/dist/xlsx.full.min.js"></script>
+  <!-- CSV (PapaParse) -->
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+
+  <style>
+    :root{
+      --bg0:#060a14;
+      --bg1:#0b1220;
+      --card:#0f1830cc;
+      --stroke:rgba(255,255,255,.10);
+      --stroke2:rgba(255,255,255,.07);
+      --text:#eaf0ff;
+      --muted:#9fb0d0;
+
+      --biso-blue:#009bd0;
+      --biso-pink:#FF0068;
+      --biso-green:#00CCAE;
+
+      --ok:#00CCAE;
+      --repor:#FFB020;
+      --crit:#FF0068;
+      --out:#7b8aa8;
+      --nogiro:#9aa7c4;
+
+      --glow-blue:rgba(0,155,208,.20);
+      --glow-pink:rgba(255,0,104,.20);
+      --glow-green:rgba(0,204,174,.18);
+
+      --radius:16px;
+      --radius2:22px;
+
+      --shadow-soft: 0 10px 30px rgba(0,0,0,.35);
+    }
+
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      color:var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      background:
+        radial-gradient(1200px 600px at 12% 0%, rgba(0,155,208,.18), transparent 60%),
+        radial-gradient(900px 500px at 85% 10%, rgba(255,0,104,.12), transparent 60%),
+        radial-gradient(900px 500px at 60% 90%, rgba(0,204,174,.10), transparent 60%),
+        linear-gradient(180deg, var(--bg0), var(--bg1));
+    }
+
+    .wrap{ max-width:1280px; margin:22px auto; padding:0 16px 44px; }
+    .topbar{
+      display:flex; justify-content:space-between; align-items:flex-end; gap:14px; flex-wrap:wrap;
+      margin-bottom:14px;
+    }
+    .title{ display:flex; flex-direction:column; gap:6px; }
+    h1{ margin:0; font-size:18px; letter-spacing:.2px; }
+    .subtitle{ font-size:12px; color:var(--muted); }
+
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      border:1px solid var(--stroke);
+      border-radius: var(--radius2);
+      padding:14px;
+      box-shadow: var(--shadow-soft);
+      backdrop-filter: blur(10px);
+      position:relative;
+      overflow:hidden;
+    }
+    .card:before{
+      content:"";
+      position:absolute; inset:-2px;
+      background:
+        radial-gradient(500px 160px at 20% 0%, var(--glow-blue), transparent 55%),
+        radial-gradient(500px 160px at 80% 0%, var(--glow-pink), transparent 55%),
+        radial-gradient(500px 180px at 50% 120%, var(--glow-green), transparent 55%);
+      opacity:.55;
+      pointer-events:none;
+    }
+    .card > *{ position:relative; z-index:1; }
+
+    .panel-title{
+      font-size:12px; color:#cfe0ff; margin:0 0 10px;
+      display:flex; align-items:center; gap:10px;
+    }
+
+    .controls{
+      display:flex; flex-wrap:wrap; gap:10px; align-items:end;
+    }
+    label{ display:block; font-size:11px; color:var(--muted); margin-bottom:6px; }
+    input[type="file"], input[type="number"], input[type="text"], select{
+      width:100%;
+      background:#07122a;
+      color:var(--text);
+      border:1px solid var(--stroke);
+      border-radius:12px;
+      padding:10px 12px;
+      outline:none;
+      transition: transform .12s ease, border-color .12s ease, box-shadow .12s ease;
+    }
+    input:focus, select:focus{
+      border-color: rgba(0,155,208,.55);
+      box-shadow: 0 0 0 4px rgba(0,155,208,.15);
+      transform: translateY(-1px);
+    }
+
+    .btn{
+      background: linear-gradient(180deg, rgba(0,155,208,.18), rgba(0,155,208,.10));
+      border:1px solid rgba(0,155,208,.35);
+      color:var(--text);
+      border-radius:12px;
+      padding:10px 12px;
+      cursor:pointer;
+      transition: transform .12s ease, filter .12s ease, box-shadow .12s ease;
+      box-shadow: 0 10px 24px rgba(0,0,0,.35);
+      display:inline-flex; align-items:center; gap:8px;
+      user-select:none;
+    }
+    .btn:hover{ filter:brightness(1.08); transform: translateY(-1px); }
+    .btn:disabled{ opacity:.45; cursor:not-allowed; transform:none; }
+    .btn.secondary{
+      background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04));
+      border-color: var(--stroke);
+    }
+    .btn.pink{
+      background: linear-gradient(180deg, rgba(255,0,104,.18), rgba(255,0,104,.10));
+      border-color: rgba(255,0,104,.38);
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1.25fr 1fr;
+      gap:12px;
+      margin-top:12px;
+    }
+    @media (max-width: 980px){ .grid{ grid-template-columns: 1fr; } }
+
+    .kpis{
+      display:grid; gap:10px;
+      grid-template-columns: repeat(4, minmax(160px, 1fr));
+    }
+    @media (max-width: 980px){ .kpis{ grid-template-columns: repeat(2, minmax(160px, 1fr)); } }
+    @media (max-width: 520px){ .kpis{ grid-template-columns: 1fr; } }
+
+    .kpi{
+      border:1px solid var(--stroke);
+      border-radius: var(--radius);
+      padding:12px;
+      background: rgba(7,18,42,.55);
+      box-shadow: 0 12px 26px rgba(0,0,0,.35);
+      transition: transform .14s ease, box-shadow .14s ease;
+    }
+    .kpi:hover{ transform: translateY(-2px); box-shadow: 0 18px 40px rgba(0,0,0,.45); }
+    .kpi .label{ font-size:11px; color:var(--muted); }
+    .kpi .value{ font-size:18px; font-weight:800; margin-top:6px; letter-spacing:.2px; }
+    .kpi .hint{ font-size:11px; color:rgba(159,176,208,.85); margin-top:6px; }
+
+    .chips{ display:flex; flex-wrap:wrap; gap:8px; margin-top:10px; }
+    .chip{
+      padding:8px 10px; border-radius:999px; font-size:12px;
+      border:1px solid var(--stroke);
+      background: rgba(255,255,255,.04);
+      cursor:pointer; user-select:none;
+      transition: transform .12s ease, border-color .12s ease, filter .12s ease;
+      display:inline-flex; gap:8px; align-items:center;
+    }
+    .chip:hover{ transform: translateY(-1px); filter:brightness(1.08); }
+    .chip.active{
+      border-color: rgba(0,155,208,.55);
+      box-shadow: 0 0 0 4px rgba(0,155,208,.12);
+    }
+    .dot{ width:10px; height:10px; border-radius:999px; display:inline-block; }
+    .dot.ok{ background:var(--ok); }
+    .dot.repor{ background:var(--repor); }
+    .dot.crit{ background:var(--crit); }
+    .dot.out{ background:var(--out); }
+    .dot.nogiro{ background:var(--nogiro); }
+
+    .status-pill{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:7px 10px;
+      border-radius:999px;
+      border:1px solid var(--stroke);
+      background: rgba(255,255,255,.04);
+      font-size:12px;
+      white-space:nowrap;
+    }
+    .badge{
+      padding:6px 10px; border-radius:999px; font-size:11px; font-weight:700;
+      border:1px solid var(--stroke2);
+      background: rgba(255,255,255,.04);
+    }
+    .badge.ok{ border-color: rgba(0,204,174,.38); background: rgba(0,204,174,.12); }
+    .badge.repor{ border-color: rgba(255,176,32,.42); background: rgba(255,176,32,.12); }
+    .badge.crit{ border-color: rgba(255,0,104,.45); background: rgba(255,0,104,.12); }
+    .badge.out{ border-color: rgba(123,138,168,.42); background: rgba(123,138,168,.12); }
+    .badge.nogiro{ border-color: rgba(154,167,196,.42); background: rgba(154,167,196,.12); }
+
+    .gauge{
+      height:18px; border-radius:999px; overflow:hidden;
+      border:1px solid var(--stroke);
+      background: rgba(255,255,255,.04);
+      display:flex;
+    }
+    .seg{ height:100%; }
+    .seg.ok{ background:linear-gradient(90deg, rgba(0,204,174,.92), rgba(0,204,174,.62)); }
+    .seg.repor{ background:linear-gradient(90deg, rgba(255,176,32,.92), rgba(255,176,32,.58)); }
+    .seg.crit{ background:linear-gradient(90deg, rgba(255,0,104,.92), rgba(255,0,104,.60)); }
+    .seg.out{ background:linear-gradient(90deg, rgba(123,138,168,.92), rgba(123,138,168,.55)); }
+    .seg.nogiro{ background:linear-gradient(90deg, rgba(154,167,196,.92), rgba(154,167,196,.55)); }
+
+    .table-card{ margin-top:12px; }
+    /* Ajuste solicitado: sem scroll interno, exibir tabela por completo */
+    .table-wrap{
+      max-height:none;
+      overflow:visible;
+      border:1px solid var(--stroke);
+      border-radius: var(--radius2);
+      background: rgba(7,18,42,.45);
+      box-shadow: var(--shadow-soft);
+    }
+
+    table{ width:100%; border-collapse:collapse; font-size:12px; }
+    th, td{
+      padding:10px 10px;
+      border-bottom:1px solid rgba(255,255,255,.06);
+      vertical-align:top;
+    }
+    th{
+      position:sticky; top:0; z-index:2;
+      background: rgba(7,18,42,.92);
+      color:#cfe0ff;
+      font-weight:800;
+      cursor:pointer;
+      user-select:none;
+      white-space:nowrap;
+    }
+    tr:hover td{ background: rgba(255,255,255,.03); }
+    td.right{ text-align:right; white-space:nowrap; }
+    td.nowrap{ white-space:nowrap; }
+    .muted{ color:var(--muted); }
+    .error{ color:#ff8f8f; font-size:12px; white-space:pre-wrap; }
+
+    .fade-in{ animation: fadeIn .22s ease both; }
+    @keyframes fadeIn{ from{ opacity:0; transform: translateY(6px);} to{ opacity:1; transform:none;} }
+
+    /* Skeleton */
+    .skeleton{
+      position:relative;
+      overflow:hidden;
+      background: rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.06);
+      border-radius: 14px;
+    }
+    .skeleton:after{
+      content:"";
+      position:absolute; top:0; left:-60%;
+      width:60%; height:100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,.09), transparent);
+      animation: shimmer 1.05s infinite;
+    }
+    @keyframes shimmer{
+      0%{ left:-60%; }
+      100%{ left:120%; }
+    }
+    .sk-row{ height:14px; border-radius:10px; margin:8px 0; }
+
+    .drop{
+      border:1px dashed rgba(0,155,208,.40);
+      background: rgba(0,155,208,.06);
+      border-radius: 14px;
+      padding:10px 12px;
+      color: rgba(207,224,255,.92);
+      font-size:12px;
+      display:flex; gap:10px; align-items:center; justify-content:space-between;
+    }
+    .drop strong{ color:#eaf0ff; }
+
+    /* Ajuste solicitado: régua de cobertura em dias */
+    .coverage-cell{
+      display:flex;
+      flex-direction:column;
+      gap:6px;
+      align-items:flex-end;
+    }
+    .coverage-bar{
+      width:120px;
+      height:10px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.05);
+      overflow:hidden;
+      position:relative;
+    }
+    .coverage-bar .fill{
+      height:100%;
+      border-radius:999px;
+    }
+    .coverage-bar .ticks{
+      position:absolute;
+      inset:0;
+      display:flex;
+      pointer-events:none;
+    }
+    .coverage-bar .ticks span{
+      flex:1;
+      border-right:1px solid rgba(255,255,255,.06);
+    }
+    .coverage-bar .ticks span:last-child{ border-right:none; }
+
+    .fill.ok{ background:linear-gradient(90deg, rgba(0,204,174,.92), rgba(0,204,174,.55)); }
+    .fill.repor{ background:linear-gradient(90deg, rgba(255,176,32,.92), rgba(255,176,32,.55)); }
+    .fill.crit{ background:linear-gradient(90deg, rgba(255,0,104,.92), rgba(255,0,104,.55)); }
+    .fill.out{ background:linear-gradient(90deg, rgba(123,138,168,.92), rgba(123,138,168,.55)); }
+    .fill.nogiro{ background:linear-gradient(90deg, rgba(154,167,196,.92), rgba(154,167,196,.55)); }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="title">
+        <h1>📦 Dashboard de Estoque • Premium Dark (Supply/Marketplace)</h1>
+        <div class="subtitle">Importe CSV/XLSX diariamente para atualizar • Cobertura, alvo, necessidade, prioridade e indicadores</div>
+      </div>
+      <div class="status-pill" id="lastUpdatePill">
+        <span class="dot out"></span>
+        <span class="muted">Sem arquivo carregado</span>
+      </div>
+    </div>
+
+    <div class="card fade-in">
+      <div class="panel-title">⚙️ Importação + parâmetros</div>
+
+      <div class="controls">
+        <div style="min-width:260px; flex:1;">
+          <label>Arquivo (.csv/.xlsx/.xls)</label>
+          <input id="fileInput" type="file" accept=".xlsx,.xls,.csv" />
+        </div>
+
+        <div style="min-width:170px;">
+          <label>Estoque de segurança (meses)</label>
+          <input id="safetyMonths" type="number" min="0" step="0.5" value="2" />
+        </div>
+
+        <div style="min-width:170px;">
+          <label>Crítico abaixo de (meses)</label>
+          <input id="criticalMonths" type="number" min="0" step="0.5" value="1" />
+        </div>
+
+        <div style="min-width:170px;">
+          <label>Prazo reposição (dias) (opcional)</label>
+          <input id="leadTimeDays" type="number" min="0" step="1" value="0" />
+        </div>
+
+        <button class="btn" id="processBtn">🚀 Processar</button>
+        <button class="btn secondary" id="exportBtn" disabled>📤 Exportar CSV (filtrado)</button>
+        <button class="btn pink" id="clearBtn">🧹 Limpar</button>
+      </div>
+
+      <div style="margin-top:10px;" class="drop" id="dropZone">
+        <div>📎 Arraste e solte aqui o <strong>CSV/XLSX</strong> para atualizar automaticamente</div>
+        <div class="muted">Colunas: Código EAN • Nome do produto • Categoria • Estoque atual • Giro mensal • Preço de custo</div>
+      </div>
+
+      <div id="errors" class="error" style="margin-top:10px;"></div>
+    </div>
+
+    <div class="grid">
+      <div class="card fade-in">
+        <div class="panel-title">📊 Indicadores financeiros & operação</div>
+        <div class="kpis" id="kpiGrid"></div>
+
+        <div style="margin-top:12px;">
+          <div class="panel-title" style="margin:0 0 10px;">🧭 Régua visual (mix de risco)</div>
+          <div class="gauge" id="gauge"></div>
+          <div class="chips" id="legend"></div>
+        </div>
+
+        <div style="margin-top:12px;">
+          <div class="panel-title" style="margin:0 0 10px;">🚨 Alertas operacionais</div>
+          <div id="alerts" class="muted">Carregue um arquivo para ver alertas.</div>
+        </div>
+      </div>
+
+      <div class="card fade-in">
+        <div class="panel-title">🔎 Filtros rápidos</div>
+
+        <div class="controls">
+          <div style="min-width:260px; flex:1;">
+            <label>Busca por SKU/EAN ou Produto</label>
+            <input id="searchInput" type="text" placeholder="Ex.: 789..., Ajinomoto, Tempero..." />
+          </div>
+
+          <div style="min-width:220px;">
+            <label>Categoria</label>
+            <select id="categorySelect">
+              <option value="">Todas</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="chips" id="quickFilters" style="margin-top:10px;"></div>
+
+        <div style="margin-top:10px;" class="muted">
+          💡 Dica: clique nos cabeçalhos da tabela para ordenar (prioridade, necessidade, valor do pedido, etc.).
+        </div>
+      </div>
+    </div>
+
+    <div class="card table-card fade-in">
+      <div class="panel-title">📋 Tabela dinâmica (abastecimento por SKU)</div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th data-key="ean">EAN/SKU</th>
+              <th data-key="product_name">Produto</th>
+              <th data-key="category">Categoria</th>
+
+              <th data-key="stock_current" class="right">Estoque</th>
+              <th data-key="monthly_turnover" class="right">Giro/mês</th>
+
+              <th data-key="coverage_months" class="right">Cobertura (m)</th>
+              <th data-key="coverage_days" class="right">Cobertura (d)</th>
+
+              <th data-key="target_stock" class="right">Estoque alvo</th>
+              <th data-key="need_to_buy" class="right">Necessidade</th>
+
+              <th data-key="priority_rank">Prioridade</th>
+
+              <th data-key="unit_cost" class="right">Custo (BRL)</th>
+              <th data-key="order_value" class="right">Valor compra (BRL)</th>
+              <th data-key="inventory_value" class="right">Valor estoque (BRL)</th>
+
+              <th data-key="status_key">Status</th>
+            </tr>
+          </thead>
+          <tbody id="tbody">
+            <tr><td colspan="14" class="muted">Importe um arquivo para preencher a tabela…</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+<script>
+  // ----------------------------
+  // State
+  // ----------------------------
+  const state = {
+    rawRows: [],
+    rows: [],
+    filtered: [],
+    sortKey: "priority_rank",
+    sortDir: "asc",
+    activeStatusFilter: "all",
+    search: "",
+    category: "",
+    lastFileName: null
+  };
+
+  // ----------------------------
+  // Elements
+  // ----------------------------
+  const fileInput = document.getElementById("fileInput");
+  const processBtn = document.getElementById("processBtn");
+  const exportBtn = document.getElementById("exportBtn");
+  const clearBtn = document.getElementById("clearBtn");
+
+  const safetyMonthsEl = document.getElementById("safetyMonths");
+  const criticalMonthsEl = document.getElementById("criticalMonths");
+  const leadTimeDaysEl = document.getElementById("leadTimeDays");
+
+  const errorsEl = document.getElementById("errors");
+  const lastUpdatePill = document.getElementById("lastUpdatePill");
+
+  const kpiGrid = document.getElementById("kpiGrid");
+  const gauge = document.getElementById("gauge");
+  const legend = document.getElementById("legend");
+  const alertsEl = document.getElementById("alerts");
+
+  const quickFilters = document.getElementById("quickFilters");
+  const searchInput = document.getElementById("searchInput");
+  const categorySelect = document.getElementById("categorySelect");
+
+  const tbody = document.getElementById("tbody");
+  const dropZone = document.getElementById("dropZone");
+
+  // ----------------------------
+  // Helpers
+  // ----------------------------
+  function normalizeHeader(s){
+    return (s ?? "")
+      .toString()
+      .trim()
+      .toLowerCase()
+      .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+      .replace(/\s+/g, " ");
+  }
+
+  function parseNumberBr(v){
+    if (v === null || v === undefined) return 0;
+    if (typeof v === "number") return isFinite(v) ? v : 0;
+
+    let s = v.toString().trim();
+    if (!s) return 0;
+
+    s = s.replace(/\s/g, "").replace(/^r\$/i, "");
+
+    if (s.includes(",") && s.includes(".")){
+      s = s.replace(/\./g, "").replace(",", ".");
+      const n = Number(s);
+      return isFinite(n) ? n : 0;
+    }
+    if (s.includes(",") && !s.includes(".")){
+      s = s.replace(",", ".");
+      const n = Number(s);
+      return isFinite(n) ? n : 0;
+    }
+    const n = Number(s);
+    return isFinite(n) ? n : 0;
+  }
+
+  function formatInt(n){ return (Math.round(Number(n)||0)).toLocaleString("pt-BR"); }
+  function formatDec(n, d=2){
+    const x = Number(n);
+    if (!isFinite(x)) return "—";
+    return x.toLocaleString("pt-BR", { minimumFractionDigits:d, maximumFractionDigits:d });
+  }
+  function formatBRL(n){ return (Number(n)||0).toLocaleString("pt-BR", { style:"currency", currency:"BRL" }); }
+
+  function setErrors(msg){ errorsEl.textContent = msg || ""; }
+
+  function dotClass(statusKey){
+    if (statusKey === "ok") return "ok";
+    if (statusKey === "repor") return "repor";
+    if (statusKey === "crit") return "crit";
+    if (statusKey === "out") return "out";
+    return "nogiro";
+  }
+
+  function statusMeta(statusKey){
+    if (statusKey === "out") return { label:"Esgotado", rank:0 };
+    if (statusKey === "crit") return { label:"Crítico", rank:1 };
+    if (statusKey === "repor") return { label:"Repor", rank:2 };
+    if (statusKey === "ok") return { label:"OK", rank:3 };
+    return { label:"Sem giro", rank:4 };
+  }
+
+  // Régua visual para cobertura (dias)
+  function coverageBarHtml(coverageDays, statusKey){
+    if (coverageDays === null || !isFinite(coverageDays)) {
+      return `
+        <div class="coverage-cell">
+          <div>—</div>
+          <div class="coverage-bar" title="Sem giro ou dados insuficientes">
+            <div class="ticks"><span></span><span></span><span></span><span></span></div>
+            <div class="fill nogiro" style="width:100%"></div>
+          </div>
+        </div>
+      `;
+    }
+
+    const safetyDays = parseNumberBr(safetyMonthsEl.value) * 30;
+    const denom = (safetyDays > 0) ? safetyDays : 1;
+
+    // Normaliza até 200% do alvo para manter boa leitura
+    const pct = Math.max(0, Math.min(200, (coverageDays / denom) * 100));
+    const width = pct / 2; // 200% => 100%
+
+    const cls = dotClass(statusKey);
+
+    return `
+      <div class="coverage-cell">
+        <div>${formatInt(coverageDays)}</div>
+        <div class="coverage-bar" title="Cobertura em dias vs. alvo (segurança)">
+          <div class="ticks"><span></span><span></span><span></span><span></span></div>
+          <div class="fill ${cls}" style="width:${width}%"></div>
+        </div>
+      </div>
+    `;
+  }
+
+  function buildHeaderMap(headers){
+    const h = headers.map(normalizeHeader);
+    const find = (cands) => {
+      for (const c of cands){
+        const idx = h.indexOf(normalizeHeader(c));
+        if (idx >= 0) return idx;
+      }
+      return -1;
+    };
+    return {
+      ean: find(["codigo ean","código ean","ean","sku"]),
+      name: find(["nome do produto","produto","nome"]),
+      category: find(["categoria","category"]),
+      stock: find(["estoque atual","estoque","saldo"]),
+      giro: find(["giro mensal","giro","venda mensal","sell out mensal"]),
+      cost: find(["preco de custo","preço de custo","custo","cost"])
+    };
+  }
+
+  function validateMap(map){
+    const missing = [];
+    if (map.ean < 0) missing.push("Código EAN");
+    if (map.name < 0) missing.push("Nome do produto");
+    if (map.category < 0) missing.push("Categoria");
+    if (map.stock < 0) missing.push("Estoque atual");
+    if (map.giro < 0) missing.push("Giro mensal");
+    if (map.cost < 0) missing.push("Preço de custo");
+    return missing;
+  }
+
+  function remapKeys(rows, map, headers){
+    const out = [];
+    for (const r of rows){
+      const arr = headers.map(h => r[h]);
+      out.push({
+        "Código EAN": arr[map.ean],
+        "Nome do produto": arr[map.name],
+        "Categoria": arr[map.category],
+        "Estoque atual": arr[map.stock],
+        "Giro mensal": arr[map.giro],
+        "Preço de custo": arr[map.cost]
+      });
+    }
+    return out;
+  }
+
+  function showSkeleton(){
+    kpiGrid.innerHTML = "";
+    for (let i=0;i<4;i++){
+      const d = document.createElement("div");
+      d.className = "kpi skeleton";
+      d.innerHTML = `
+        <div class="sk-row" style="width:55%"></div>
+        <div class="sk-row" style="width:80%"></div>
+        <div class="sk-row" style="width:40%"></div>
+      `;
+      kpiGrid.appendChild(d);
+    }
+
+    gauge.innerHTML = `<div class="seg out" style="width:100%"></div>`;
+    legend.innerHTML = "";
+
+    tbody.innerHTML = "";
+    for (let i=0;i<9;i++){
+      const tr = document.createElement("tr");
+      tr.innerHTML = `<td colspan="14"><div class="skeleton" style="height:14px; border-radius:10px;"></div></td>`;
+      tbody.appendChild(tr);
+    }
+
+    alertsEl.textContent = "Processando arquivo…";
+  }
+
+  function setLastUpdate(fileName){
+    const now = new Date();
+    lastUpdatePill.innerHTML = `
+      <span class="dot ok"></span>
+      <span><b>${escapeHtml(fileName || "Arquivo")}</b> • atualizado em <span class="muted">${now.toLocaleString("pt-BR")}</span></span>
+    `;
+  }
+
+  function escapeHtml(s){
+    return String(s??"")
+      .replaceAll("&","&amp;")
+      .replaceAll("<","&lt;")
+      .replaceAll(">","&gt;")
+      .replaceAll('"',"&quot;")
+      .replaceAll("'","&#39;");
+  }
+  function escapeHtmlAttr(s){ return escapeHtml(s); }
+
+  // ----------------------------
+  // Reading files
+  // ----------------------------
+  async function readExcel(file){
+    const data = await file.arrayBuffer();
+    const wb = XLSX.read(data, { type:"array" });
+    const ws = wb.Sheets[wb.SheetNames[0]];
+    return XLSX.utils.sheet_to_json(ws, { defval:"" });
+  }
+  async function readCsv(file){
+    const text = await file.text();
+    const parsed = Papa.parse(text, { header:true, skipEmptyLines:true });
+    return parsed.data || [];
+  }
+
+  // ----------------------------
+  // Core calculations
+  // ----------------------------
+  function compute(rowsRaw){
+    const safetyMonths = parseNumberBr(safetyMonthsEl.value);
+    const criticalMonths = parseNumberBr(criticalMonthsEl.value);
+    const leadTimeDays = parseNumberBr(leadTimeDaysEl.value);
+
+    const out = [];
+    const counts = { ok:0, repor:0, crit:0, out:0, nogiro:0 };
+
+    let totalSkus = 0;
+    let totalItems = 0;
+
+    let inventoryValueTotal = 0;
+    let orderValueTotal = 0;
+    let totalNeedUnits = 0;
+
+    let sumStockForCoverage = 0;
+    let sumTurnoverForCoverage = 0;
+
+    for (const rr of rowsRaw){
+      const ean = (rr["Código EAN"] ?? "").toString().trim();
+      const product_name = (rr["Nome do produto"] ?? "").toString().trim();
+      const category = (rr["Categoria"] ?? "").toString().trim();
+
+      if (!ean && !product_name) continue;
+
+      const stock_current = parseNumberBr(rr["Estoque atual"]);
+      const monthly_turnover = parseNumberBr(rr["Giro mensal"]);
+      const unit_cost = parseNumberBr(rr["Preço de custo"]);
+
+      const target_stock = Math.max(0, monthly_turnover * safetyMonths);
+      const need_to_buy = Math.max(0, Math.ceil(target_stock - stock_current));
+
+      let coverage_months = null;
+      if (monthly_turnover > 0){
+        coverage_months = stock_current / monthly_turnover;
+      }
+      let coverage_days = null;
+      if (coverage_months !== null && isFinite(coverage_months)){
+        coverage_days = coverage_months * 30;
+      }
+
+      // status / prioridade
+      let status_key = "ok";
+      if (monthly_turnover <= 0){
+        status_key = "nogiro";
+      } else if (stock_current <= 0){
+        status_key = "out";
+      } else if (coverage_months < criticalMonths){
+        status_key = "crit";
+      } else if (coverage_months < safetyMonths){
+        status_key = "repor";
+      } else {
+        status_key = "ok";
+      }
+
+      const meta = statusMeta(status_key);
+      const priority_rank = meta.rank;
+
+      const order_value = need_to_buy * unit_cost;
+      const inventory_value = Math.max(0, stock_current) * unit_cost;
+
+      // KPI accumulation
+      totalSkus++;
+      totalItems += (isFinite(stock_current) ? stock_current : 0);
+      inventoryValueTotal += (isFinite(inventory_value) ? inventory_value : 0);
+      orderValueTotal += (isFinite(order_value) ? order_value : 0);
+      totalNeedUnits += need_to_buy;
+
+      // cobertura agregada (para KPI)
+      if (monthly_turnover > 0 && stock_current > 0){
+        sumStockForCoverage += stock_current;
+        sumTurnoverForCoverage += monthly_turnover;
+      }
+
+      counts[status_key] = (counts[status_key] || 0) + 1;
+
+      // risco por lead time
+      const lead_time_risk = (leadTimeDays > 0 && coverage_days !== null && isFinite(coverage_days) && coverage_days < leadTimeDays);
+
+      out.push({
+        ean,
+        product_name,
+        category,
+
+        stock_current,
+        monthly_turnover,
+
+        coverage_months,
+        coverage_days,
+
+        target_stock,
+        need_to_buy,
+
+        unit_cost,
+        order_value,
+        inventory_value,
+
+        status_key,
+        status_label: meta.label,
+        priority_rank,
+        lead_time_risk
+      });
+    }
+
+    // cobertura média (dias) do estoque total
+    let avgCoverageDaysTotal = null;
+    if (sumTurnoverForCoverage > 0){
+      avgCoverageDaysTotal = (sumStockForCoverage / sumTurnoverForCoverage) * 30;
+    }
+
+    out.sort((a,b) => {
+      if (a.priority_rank !== b.priority_rank) return a.priority_rank - b.priority_rank;
+      return (b.order_value||0) - (a.order_value||0);
+    });
+
+    return {
+      rows: out,
+      counts,
+      totalSkus,
+      totalItems,
+      inventoryValueTotal,
+      orderValueTotal,
+      totalNeedUnits,
+      avgCoverageDaysTotal
+    };
+  }
+
+  // ----------------------------
+  // Filters / Sort
+  // ----------------------------
+  function compareByKey(a,b,key,dir){
+    const m = (dir === "asc") ? 1 : -1;
+
+    const av = a[key];
+    const bv = b[key];
+
+    if (typeof av === "string" || typeof bv === "string"){
+      return (String(av||"").localeCompare(String(bv||""), "pt-BR")) * m;
+    }
+    if (av === null && bv === null) return 0;
+    if (av === null) return 1 * m;
+    if (bv === null) return -1 * m;
+
+    return ((av||0) - (bv||0)) * m;
+  }
+
+  function setSort(key){
+    if (state.sortKey === key){
+      state.sortDir = (state.sortDir === "asc") ? "desc" : "asc";
+    } else {
+      state.sortKey = key;
+      state.sortDir = "asc";
+    }
+    applyFilters();
+  }
+
+  function applyFilters(){
+    const q = (state.search || "").trim().toLowerCase();
+    const cat = state.category || "";
+    const st = state.activeStatusFilter || "all";
+
+    let rows = state.rows.slice();
+
+    if (st !== "all"){
+      rows = rows.filter(r => r.status_key === st);
+    }
+
+    if (cat){
+      rows = rows.filter(r => (r.category || "") === cat);
+    }
+
+    if (q){
+      rows = rows.filter(r => {
+        const hay = `${r.ean} ${r.product_name} ${r.category}`.toLowerCase();
+        return hay.includes(q);
+      });
+    }
+
+    rows.sort((a,b) => compareByKey(a,b,state.sortKey,state.sortDir));
+    state.filtered = rows;
+
+    renderTable(rows);
+    exportBtn.disabled = rows.length === 0;
+  }
+
+  // ----------------------------
+  // Rendering
+  // ----------------------------
+  function renderKPIs(data){
+    const riskCount = (data.counts.out||0) + (data.counts.crit||0) + (data.counts.repor||0);
+    const riskPct = data.totalSkus ? (riskCount / data.totalSkus) * 100 : 0;
+
+    const kpis = [
+      { label:"Valor do pedido sugerido", value: formatBRL(data.orderValueTotal), hint:"Somatório (necessidade × custo) para chegar no estoque alvo" },
+
+      /* Ajuste solicitado: trocar “valor do estoque atual” por cobertura média em dias do estoque total */
+      {
+        label:"Cobertura média do estoque (dias)",
+        value: (data.avgCoverageDaysTotal === null ? "—" : formatInt(data.avgCoverageDaysTotal)),
+        hint:"Cobertura agregada: (∑estoque / ∑giro) × 30 • considera apenas itens com giro > 0"
+      },
+
+      { label:"Unidades a comprar", value: formatInt(data.totalNeedUnits), hint:"Somatório das necessidades de compra" },
+      { label:"SKUs em risco", value: `${formatInt(riskCount)} (${formatDec(riskPct,1)}%)`, hint:"Repor + Crítico + Esgotado" }
+    ];
+
+    kpiGrid.innerHTML = "";
+    for (const k of kpis){
+      const d = document.createElement("div");
+      d.className = "kpi";
+      d.innerHTML = `
+        <div class="label">${escapeHtml(k.label)}</div>
+        <div class="value">${k.value}</div>
+        <div class="hint">${escapeHtml(k.hint)}</div>
+      `;
+      kpiGrid.appendChild(d);
+    }
+  }
+
+  function renderGauge(counts, total){
+    gauge.innerHTML = "";
+    legend.innerHTML = "";
+
+    if (!total){
+      gauge.innerHTML = `<div class="seg out" style="width:100%"></div>`;
+      return;
+    }
+
+    const parts = [
+      { key:"ok", label:"OK", cls:"ok" },
+      { key:"repor", label:"Repor", cls:"repor" },
+      { key:"crit", label:"Crítico", cls:"crit" },
+      { key:"out", label:"Esgotado", cls:"out" },
+      { key:"nogiro", label:"Sem giro", cls:"nogiro" }
+    ];
+
+    for (const p of parts){
+      const v = counts[p.key] || 0;
+      const w = (v / total) * 100;
+
+      const seg = document.createElement("div");
+      seg.className = `seg ${p.cls}`;
+      seg.style.width = `${w}%`;
+      seg.title = `${p.label}: ${v}`;
+      gauge.appendChild(seg);
+
+      const pill = document.createElement("div");
+      pill.className = "status-pill";
+      pill.innerHTML = `<span class="dot ${p.cls}"></span><span>${p.label}: <b>${v}</b></span>`;
+      legend.appendChild(pill);
+    }
+  }
+
+  function renderAlerts(data){
+    if (!data.totalSkus){
+      alertsEl.textContent = "Carregue um arquivo para ver alertas.";
+      return;
+    }
+
+    const out = data.counts.out || 0;
+    const crit = data.counts.crit || 0;
+    const repor = data.counts.repor || 0;
+    const nogiro = data.counts.nogiro || 0;
+
+    const lines = [];
+    if (out > 0) lines.push(`• ⛔ ${out} SKU(s) esgotado(s) — risco imediato de perda de venda.`);
+    if (crit > 0) lines.push(`• 🔥 ${crit} SKU(s) em estado crítico — cobertura abaixo do nível crítico.`);
+    if (repor > 0) lines.push(`• ⚠️ ${repor} SKU(s) abaixo do estoque de segurança — programar compra/reabastecimento.`);
+    if (nogiro > 0) lines.push(`• 💤 ${nogiro} SKU(s) sem giro mensal — revisar parametrização (giro) ou estratégia do item.`);
+
+    const leadTimeDays = parseNumberBr(leadTimeDaysEl.value);
+    if (leadTimeDays > 0){
+      const ltRisk = data.rows.filter(r => r.lead_time_risk).length;
+      if (ltRisk > 0) lines.push(`• 🕒 ${ltRisk} SKU(s) com cobertura menor que o lead time (${leadTimeDays} dias) — risco de ruptura antes da reposição.`);
+    }
+
+    if (!lines.length) lines.push("✅ Sem alertas críticos — operação parece saudável com base nos parâmetros atuais.");
+
+    alertsEl.innerHTML = `<div>${lines.join("<br/>")}</div>`;
+  }
+
+  function renderQuickFilters(counts){
+    const total = Object.values(counts).reduce((a,b)=>a+(b||0),0);
+
+    const items = [
+      { key:"all", label:"Todos", dot:"ok", qty: total },
+      { key:"out", label:"Esgotado", dot:"out", qty: counts.out||0 },
+      { key:"crit", label:"Crítico", dot:"crit", qty: counts.crit||0 },
+      { key:"repor", label:"Repor", dot:"repor", qty: counts.repor||0 },
+      { key:"ok", label:"OK", dot:"ok", qty: counts.ok||0 },
+      { key:"nogiro", label:"Sem giro", dot:"nogiro", qty: counts.nogiro||0 }
+    ];
+
+    quickFilters.innerHTML = "";
+    for (const it of items){
+      const chip = document.createElement("div");
+      chip.className = "chip" + (state.activeStatusFilter === it.key ? " active" : "");
+      chip.innerHTML = `<span class="dot ${it.dot}"></span><span>${it.label}</span><span class="badge ${it.dot}">${it.qty}</span>`;
+      chip.addEventListener("click", () => {
+        state.activeStatusFilter = it.key;
+        [...quickFilters.querySelectorAll(".chip")].forEach(c => c.classList.remove("active"));
+        chip.classList.add("active");
+        applyFilters();
+      });
+      quickFilters.appendChild(chip);
+    }
+  }
+
+  function fillCategorySelect(rows){
+    const cats = [...new Set(rows.map(r => (r.category||"").trim()).filter(Boolean))]
+      .sort((a,b)=>a.localeCompare(b,"pt-BR"));
+    categorySelect.innerHTML =
+      `<option value="">Todas</option>` +
+      cats.map(c => `<option value="${escapeHtmlAttr(c)}">${escapeHtml(c)}</option>`).join("");
+  }
+
+  function renderTable(rows){
+    tbody.innerHTML = "";
+    if (!rows.length){
+      tbody.innerHTML = `<tr><td colspan="14" class="muted">Nenhum item com os filtros atuais.</td></tr>`;
+      return;
+    }
+
+    for (const r of rows){
+      const tr = document.createElement("tr");
+
+      const covM = (r.coverage_months === null || !isFinite(r.coverage_months)) ? "—" : formatDec(r.coverage_months, 2);
+
+      const statusBadge = `<span class="badge ${dotClass(r.status_key)}">${escapeHtml(r.status_label)}</span>`;
+      const prioLabel =
+        (r.status_key === "out") ? "P0" :
+        (r.status_key === "crit") ? "P1" :
+        (r.status_key === "repor") ? "P2" :
+        (r.status_key === "ok") ? "P3" : "P4";
+
+      tr.innerHTML = `
+        <td class="nowrap"><b>${escapeHtml(r.ean)}</b></td>
+        <td>${escapeHtml(r.product_name)}</td>
+        <td>${escapeHtml(r.category)}</td>
+
+        <td class="right">${formatInt(r.stock_current)}</td>
+        <td class="right">${formatInt(r.monthly_turnover)}</td>
+
+        <td class="right">${covM}</td>
+
+        <!-- Ajuste solicitado: coluna cobertura (d) com régua -->
+        <td class="right">${coverageBarHtml(r.coverage_days, r.status_key)}</td>
+
+        <td class="right">${formatInt(r.target_stock)}</td>
+        <td class="right"><b>${formatInt(r.need_to_buy)}</b></td>
+
+        <td>
+          <span class="status-pill">
+            <span class="dot ${dotClass(r.status_key)}"></span>
+            <span><b>${prioLabel}</b></span>
+          </span>
+        </td>
+
+        <td class="right">${formatBRL(r.unit_cost)}</td>
+        <td class="right"><b>${formatBRL(r.order_value)}</b></td>
+        <td class="right">${formatBRL(r.inventory_value)}</td>
+
+        <td>${statusBadge}</td>
+      `;
+      tbody.appendChild(tr);
+    }
+  }
+
+  // ----------------------------
+  // CSV export (filtered)
+  // ----------------------------
+  function buildCsv(rows){
+    const safetyMonths = parseNumberBr(safetyMonthsEl.value);
+    const criticalMonths = parseNumberBr(criticalMonthsEl.value);
+    const leadTimeDays = parseNumberBr(leadTimeDaysEl.value);
+
+    const headers = [
+      "Código EAN","Nome do produto","Categoria",
+      "Estoque atual","Giro mensal",
+      "Cobertura (meses)","Cobertura (dias)",
+      "Estoque alvo","Necessidade de compra",
+      "Prioridade","Status",
+      "Preço de custo",
+      "Valor compra","Valor estoque",
+      "Parâmetro segurança (meses)","Parâmetro crítico (meses)","Lead time (dias)"
+    ];
+
+    const lines = [headers.join(",")];
+    for (const r of rows){
+      const prio =
+        (r.status_key === "out") ? "P0" :
+        (r.status_key === "crit") ? "P1" :
+        (r.status_key === "repor") ? "P2" :
+        (r.status_key === "ok") ? "P3" : "P4";
+
+      const values = [
+        r.ean, r.product_name, r.category,
+        Math.round(r.stock_current||0),
+        Math.round(r.monthly_turnover||0),
+        (r.coverage_months===null || !isFinite(r.coverage_months)) ? "" : r.coverage_months.toFixed(4),
+        (r.coverage_days===null || !isFinite(r.coverage_days)) ? "" : Math.round(r.coverage_days),
+        Math.round(r.target_stock||0),
+        Math.round(r.need_to_buy||0),
+        prio,
+        r.status_label,
+        (r.unit_cost||0).toFixed(2),
+        (r.order_value||0).toFixed(2),
+        (r.inventory_value||0).toFixed(2),
+        safetyMonths, criticalMonths, leadTimeDays
+      ].map(v => `"${String(v??"").replace(/"/g,'""')}"`);
+
+      lines.push(values.join(","));
+    }
+    return lines.join("\n");
+  }
+
+  function downloadCsv(rows){
+    const csv = buildCsv(rows);
+    const blob = new Blob([csv], { type:"text/csv;charset=utf-8;" });
+    const url = URL.createObjectURL(blob);
+
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "resultado_abastecimento_filtrado.csv";
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+
+    URL.revokeObjectURL(url);
+  }
+
+  // ----------------------------
+  // Main process
+  // ----------------------------
+  async function processFile(file){
+    setErrors("");
+    exportBtn.disabled = true;
+
+    if (!file){
+      setErrors("Selecione um arquivo CSV/XLSX.");
+      return;
+    }
+
+    const safetyMonths = parseNumberBr(safetyMonthsEl.value);
+    const criticalMonths = parseNumberBr(criticalMonthsEl.value);
+
+    if (safetyMonths < 0 || criticalMonths < 0){
+      setErrors("Parâmetros inválidos: meses precisam ser >= 0.");
+      return;
+    }
+
+    showSkeleton();
+
+    let rows = [];
+    try{
+      const ext = file.name.toLowerCase().split(".").pop();
+      if (ext === "csv") rows = await readCsv(file);
+      else rows = await readExcel(file);
+    } catch(e){
+      setErrors("Erro ao ler o arquivo. Verifique o formato.\n\nDetalhes: " + (e?.message || e));
+      return;
+    }
+
+    if (!rows.length){
+      setErrors("Arquivo sem linhas (ou não foi possível interpretar).");
+      return;
+    }
+
+    const headers = Object.keys(rows[0] || {});
+    const map = buildHeaderMap(headers);
+    const missing = validateMap(map);
+
+    if (missing.length){
+      setErrors(
+        "Não encontrei as colunas obrigatórias abaixo (ou os nomes estão diferentes):\n" +
+        "- " + missing.join("\n- ") +
+        "\n\nUse exatamente: Código EAN, Nome do produto, Categoria, Estoque atual, Giro mensal, Preço de custo."
+      );
+      return;
+    }
+
+    const remapped = remapKeys(rows, map, headers);
+    const computed = compute(remapped);
+
+    state.rawRows = remapped;
+    state.rows = computed.rows;
+    state.filtered = computed.rows.slice();
+    state.lastFileName = file.name;
+
+    renderKPIs(computed);
+    renderGauge(computed.counts, computed.totalSkus);
+    renderAlerts(computed);
+    renderQuickFilters(computed.counts);
+    fillCategorySelect(computed.rows);
+
+    state.activeStatusFilter = "all";
+    state.search = "";
+    state.category = "";
+    searchInput.value = "";
+    categorySelect.value = "";
+
+    state.sortKey = "priority_rank";
+    state.sortDir = "asc";
+
+    setLastUpdate(file.name);
+    applyFilters();
+  }
+
+  // ----------------------------
+  // Events
+  // ----------------------------
+  processBtn.addEventListener("click", async () => {
+    const file = fileInput.files?.[0];
+    await processFile(file);
+  });
+
+  // Auto update on file change
+  fileInput.addEventListener("change", async () => {
+    const file = fileInput.files?.[0];
+    if (file) await processFile(file);
+  });
+
+  // Parameters change triggers recompute if we have data
+  [safetyMonthsEl, criticalMonthsEl, leadTimeDaysEl].forEach(el => {
+    el.addEventListener("change", () => {
+      if (!state.rawRows.length) return;
+      const computed = compute(state.rawRows);
+      state.rows = computed.rows;
+      renderKPIs(computed);
+      renderGauge(computed.counts, computed.totalSkus);
+      renderAlerts(computed);
+      renderQuickFilters(computed.counts);
+      fillCategorySelect(computed.rows);
+      applyFilters();
+    });
+  });
+
+  searchInput.addEventListener("input", () => {
+    state.search = searchInput.value || "";
+    applyFilters();
+  });
+
+  categorySelect.addEventListener("change", () => {
+    state.category = categorySelect.value || "";
+    applyFilters();
+  });
+
+  exportBtn.addEventListener("click", () => {
+    downloadCsv(state.filtered);
+  });
+
+  clearBtn.addEventListener("click", () => {
+    state.rawRows = [];
+    state.rows = [];
+    state.filtered = [];
+    state.lastFileName = null;
+
+    setErrors("");
+    exportBtn.disabled = true;
+
+    kpiGrid.innerHTML = "";
+    gauge.innerHTML = `<div class="seg out" style="width:100%"></div>`;
+    legend.innerHTML = "";
+    alertsEl.textContent = "Carregue um arquivo para ver alertas.";
+    quickFilters.innerHTML = "";
+    categorySelect.innerHTML = `<option value="">Todas</option>`;
+    searchInput.value = "";
+    tbody.innerHTML = `<tr><td colspan="14" class="muted">Importe um arquivo para preencher a tabela…</td></tr>`;
+
+    lastUpdatePill.innerHTML = `<span class="dot out"></span><span class="muted">Sem arquivo carregado</span>`;
+    fileInput.value = "";
+  });
+
+  document.querySelectorAll("th[data-key]").forEach(th => {
+    th.addEventListener("click", () => setSort(th.dataset.key));
+  });
+
+  // Drag & Drop
+  ["dragenter","dragover"].forEach(evt => {
+    dropZone.addEventListener(evt, (e) => {
+      e.preventDefault(); e.stopPropagation();
+      dropZone.style.borderColor = "rgba(0,204,174,.55)";
+      dropZone.style.background = "rgba(0,204,174,.08)";
+    });
+  });
+  ["dragleave","drop"].forEach(evt => {
+    dropZone.addEventListener(evt, (e) => {
+      e.preventDefault(); e.stopPropagation();
+      dropZone.style.borderColor = "rgba(0,155,208,.40)";
+      dropZone.style.background = "rgba(0,155,208,.06)";
+    });
+  });
+  dropZone.addEventListener("drop", async (e) => {
+    const file = e.dataTransfer.files?.[0];
+    if (!file) return;
+    const dt = new DataTransfer();
+    dt.items.add(file);
+    fileInput.files = dt.files;
+    await processFile(file);
+  });
+</script>
+</body>
+</html>
